@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HELOC vs Cash-Out Refinance Calculator 2026 — Equity Wiser</title>
+  <meta name="description" content="Free HELOC vs cash-out refinance calculator. Compare monthly payments, total cost, break-even analysis and rate-shock scenarios. Updated April 2026." />
+  <link rel="canonical" href="https://equitywiser.com/" />
+  <meta property="og:title" content="HELOC vs Cash-Out Refi Calculator 2026 — Equity Wiser" />
+  <meta property="og:description" content="Free unbiased calculator. Monthly payments, total cost, break-even, and variable-rate stress tests." />
+  <meta property="og:url" content="https://equitywiser.com/" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="preconnect" href="https://api.fontshare.com" />
+  <link href="https://api.fontshare.com/v2/css?f[]=boska@700,400&f[]=gambetta@700,500,400&f[]=general-sans@700,600,500,400&f[]=jet-brains-mono@600,400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"HELOC vs Cash-Out Refinance Calculator","url":"https://equitywiser.com/","applicationCategory":"FinanceApplication","operatingSystem":"Web","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="mast-inner">
+    <div class="mast-meta">
+      <span>Free · Unbiased · Educational</span>
+      <span id="mast-date"></span>
+    </div>
+    <a href="/" class="mast-name">Equity Wiser</a>
+    <div class="rate-bar">
+      <span class="rate-item"><span class="rl">30yr Fixed</span> 6.37%</span>
+      <span class="rate-item"><span class="rl">HELOC avg</span> 7.02%</span>
+      <span class="rate-item"><span class="rl">Prime</span> 6.75%</span>
+      <span class="rate-item"><span class="rl">15yr Fixed</span> 5.74%</span>
+      <span class="rate-item" style="color:var(--ink-light);font-size:0.62rem;">Freddie Mac PMMS · Apr 9, 2026</span>
+    </div>
+    <nav class="mast-nav">
+      <a href="#calculator">Calculator</a>
+      <a href="#learn">Guide</a>
+      <a href="#faq">FAQ</a>
+      <a href="#get-quotes">Get Quotes</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-inner-single">
+    <h1 class="hero-hed">HELOC or<br/>Cash-Out Refi?<br/><em>See which option wins for you.</em></h1>
+    <p class="hero-byline">Free calculator · Updated April 2026 · Sources: Freddie Mac PMMS, Bankrate, Fed H.15</p>
+  </div>
+</section>
+
+<section class="explainer">
+  <div class="exp-tagline">
+    <h2 class="exp-tag-hed">You have equity. You need cash.</h2>
+    <p class="exp-tag-sub">Here are your two options.</p>
+  </div>
+  <div class="explainer-inner">
+    <div class="exp-col">
+      <h2 class="exp-head">Option A &mdash; HELOC</h2>
+      <p class="exp-body">A second loan <em>added on top</em> of your existing mortgage. Your original rate stays completely untouched. You draw from a revolving credit line as needed, paying interest only on what you borrow. The rate is variable.</p>
+      <p class="exp-when">&#10003;&nbsp; <strong>Best when</strong> your existing rate is below 5% and you don&rsquo;t want to give it up.</p>
+    </div>
+    <div class="exp-divider" aria-hidden="true">vs.</div>
+    <div class="exp-col">
+      <h2 class="exp-head">Option B &mdash; Cash-Out Refi</h2>
+      <p class="exp-body">Your existing mortgage is <em>replaced entirely</em> with a new, larger loan at today&rsquo;s rate. You pocket the difference as cash. Every dollar you owe &mdash; old and new &mdash; resets to the current rate. One combined monthly payment.</p>
+      <p class="exp-when">&#10003;&nbsp; <strong>Best when</strong> your existing rate is already close to today&rsquo;s (above 6%).</p>
+    </div>
+  </div>
+  <div class="exp-bottom">
+    <p class="exp-verdict">Today, roughly 70% of homeowners hold rates below 5%. For them, a cash-out refi means paying today&rsquo;s 6%+ rate on <em>the full mortgage</em>, not just the new cash. That can mean hundreds of dollars more per month. The HELOC keeps your low rate and only charges you today&rsquo;s higher rate on the new money. <strong>Enter your numbers to see exactly what the difference is for your situation.</strong></p>
+    <a class="exp-cta" href="#calculator">Run the numbers &rarr;</a>
+  </div>
+</section>
+
+<section class="calc-section" id="calculator">
+  <div class="calc-inner">
+    <aside class="inputs-panel">
+      <div class="panel-head"><span class="ph-title">Your Situation</span></div>
+
+      <div class="input-group">
+        <p class="ig-head">Your Property</p>
+        <div class="field">
+          <label for="homeValue">Current home value</label>
+          <div class="iw"><span class="ipfx">$</span><input type="text" id="homeValue" class="pfx" inputmode="decimal" placeholder="450,000" /></div>
+        </div>
+        <div class="field">
+          <label for="mortgageBalance">Remaining mortgage balance</label>
+          <div class="iw"><span class="ipfx">$</span><input type="text" id="mortgageBalance" class="pfx" inputmode="decimal" placeholder="285,000" /></div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="existingRate">Current rate</label>
+            <div class="iw"><input type="number" id="existingRate" class="sfx" min="0" max="20" step="0.05" /><span class="isfx">%</span></div>
+          </div>
+          <div class="field">
+            <label for="remainingTermYears">Years left</label>
+            <input type="number" id="remainingTermYears" min="1" max="40" step="1" placeholder="e.g. 25" />
+          </div>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <p class="ig-head">What You Need</p>
+        <div class="field">
+          <label for="cashOutAmount">Amount to borrow</label>
+          <div class="iw"><span class="ipfx">$</span><input type="text" id="cashOutAmount" class="pfx" inputmode="decimal" placeholder="60,000" /></div>
+          <span class="field-hint">Max ~85% combined loan-to-value</span>
+        </div>
+        <div class="field">
+          <label id="yearsToStayLabel">How long you plan to stay: 10 years</label>
+          <input type="range" id="yearsToStay" min="1" max="30" value="10" step="1" />
+          <div class="slider-vals"><span>1 yr</span><span>15 yrs</span><span>30 yrs</span></div>
+        </div>
+      </div>
+
+      <div class="input-group">
+        <p class="ig-head">Rate Assumptions</p>
+        <p class="rate-src" style="border-top:none;padding-top:0;margin-bottom:0.65rem;">Pre-filled from current market averages &#8212; edit to match your lender quotes.</p>
+        <div class="field-row">
+          <div class="field">
+            <label for="helocRate">HELOC rate</label>
+            <div class="iw"><input type="number" id="helocRate" class="sfx" min="0" max="25" step="0.05" /><span class="isfx">%</span></div>
+          </div>
+          <div class="field">
+            <label for="refiRate">Refi rate</label>
+            <div class="iw"><input type="number" id="refiRate" class="sfx" min="0" max="25" step="0.05" /><span class="isfx">%</span></div>
+          </div>
+        </div>
+        <div class="field">
+          <label for="refiClosingPct">Refi closing costs</label>
+          <div class="iw"><input type="number" id="refiClosingPct" class="sfx" min="0" max="10" step="0.25" /><span class="isfx">%</span></div>
+          <span class="field-hint">Typically 2&#8211;5% of new loan amount</span>
+        </div>
+      </div>
+
+      <div class="input-group" style="padding-bottom:0;border-bottom:none;">
+        <button id="advanced-toggle" aria-expanded="false">&#9660; More options</button>
+        <div id="advanced-panel">
+          <div style="height:0.5rem;"></div>
+          <div class="field-row" style="margin-bottom:0.65rem;">
+            <div class="field">
+              <label for="helocDrawYears">HELOC draw period</label>
+              <select id="helocDrawYears">
+                <option value="5">5 yrs</option><option value="10" selected>10 yrs</option><option value="15">15 yrs</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="helocRepayYears">Repayment period</label>
+              <select id="helocRepayYears">
+                <option value="10">10 yrs</option><option value="15">15 yrs</option><option value="20" selected>20 yrs</option>
+              </select>
+            </div>
+          </div>
+          <div class="field" style="margin-bottom:0.65rem;">
+            <label for="helocClosingCosts">HELOC closing costs</label>
+            <div class="iw"><input type="number" id="helocClosingCosts" class="sfx" min="0" max="10" step="0.25" /><span class="isfx">%</span></div>
+            <span class="field-hint">0% for no-fee offers (common). Standard range is 2–5% of the credit line.</span>
+          </div>
+          <div class="field-row" style="margin-bottom:0.65rem;">
+            <div class="field">
+              <label for="refiTermYears">New loan term</label>
+              <select id="refiTermYears">
+                <option value="10">10 yrs</option><option value="15">15 yrs</option><option value="20">20 yrs</option><option value="30" selected>30 yrs</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="taxBracket">Tax bracket</label>
+              <select id="taxBracket">
+                <option value="10">10%</option><option value="12">12%</option><option value="22" selected>22%</option>
+                <option value="24">24%</option><option value="32">32%</option><option value="37">37%</option>
+              </select>
+            </div>
+          </div>
+          <div class="field" style="margin-bottom:0;">
+            <label class="chk-label"><input type="checkbox" id="isHomeImprovement" checked /> Funds used for home improvement</label>
+            <span class="field-hint" style="margin-left:1.25rem;">Affects TCJA interest deductibility — only improvements qualify.</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="calc-btn" id="calculate-btn">Calculate Results &#8594;</button>
+      <div id="error-box" role="alert"></div>
+    </aside>
+
+    <div id="results-placeholder" class="results-placeholder">
+      <div class="rp-inner">
+        <p class="rp-icon">&#8594;</p>
+        <p class="rp-head">Your comparison will appear here</p>
+        <p class="rp-body">Enter your home value, mortgage balance, current rate, and the amount you need above, then click the button.</p>
+      </div>
+    </div>
+    <main class="hidden" id="results-section" aria-live="polite">
+      <div class="verdict">
+        <p class="v-kicker">Based on your inputs</p>
+        <span id="winner-badge" class="v-badge badge-heloc">Recommended</span>
+        <div class="v-hed"><span id="result-winner" class="win-heloc">HELOC</span> saves you</div>
+        <span class="v-savings" id="result-savings">&#8212;</span>
+        <span class="v-horizon" id="result-horizon">over 10 years</span>
+        <p class="v-sub" id="result-subtext"></p>
+      </div>
+
+      <div class="product-cards">
+        <div class="product-card heloc-card">
+          <div class="pc-head">HELOC</div>
+          <div class="pc-pmt" id="heloc-draw-pmt">&#8212;</div>
+          <div class="pc-sub"><span style="font-size:0.6rem;font-weight:700;letter-spacing:0.06em;text-transform:uppercase;background:#1D3557;color:white;padding:0.1rem 0.4rem;margin-right:0.3rem;">Draw</span> total monthly (yrs 1&#8211;10)</div>
+          <div class="pc-rows">
+            <div class="pcr"><span class="pcr-l">Existing mortgage</span><span class="pcr-v" id="heloc-exist-pmt">&#8212;</span></div>
+            <div class="pcr"><span class="pcr-l">HELOC interest-only</span><span class="pcr-v" id="heloc-line-pmt-draw">&#8212;</span></div>
+            <div class="pcr"><span class="pcr-l">HELOC rate</span><span class="pcr-v blue" id="heloc-rate-display">&#8212;</span></div>
+            <div class="pcr"><span class="pcr-l">Closing costs</span><span class="pcr-v" id="heloc-close-cost">&#8212;</span></div>
+          </div>
+          <p class="pc-note">Repayment rises to <strong id="heloc-repay-pmt">&#8212;</strong> &#183; <span id="heloc-shock"></span></p>
+          <p class="pc-note" id="heloc-tax-savings" style="display:none;color:#1A7A4A;"></p>
+        </div>
+        <div class="product-card refi-card">
+          <div class="pc-head">Cash-Out Refi</div>
+          <div class="pc-pmt" id="refi-pmt">&#8212;</div>
+          <div class="pc-sub">New single payment (fixed for loan term)</div>
+          <div class="pc-rows">
+            <div class="pcr"><span class="pcr-l">New loan amount</span><span class="pcr-v" id="refi-loan-amt">&#8212;</span></div>
+            <div class="pcr"><span class="pcr-l">Refi rate</span><span class="pcr-v" id="refi-rate-display">&#8212;</span></div>
+            <div class="pcr"><span class="pcr-l">Closing costs</span><span class="pcr-v red" id="refi-close-cost">&#8212;</span></div>
+            <div id="pmi-row" class="pcr" style="display:none;"><span class="pcr-l">PMI (LTV &gt; 80%)</span><span class="pcr-v red" id="refi-pmi">&#8212;</span></div>
+          </div>
+          <p class="pc-note" id="rate-lock-cost"></p>
+          <p class="pc-note" id="refi-tax-savings" style="display:none;"></p>
+        </div>
+      </div>
+
+      <div class="be-bar">
+        <div class="be-num" id="break-even-label">&#8212;</div>
+        <div>
+          <p class="be-kicker">Refi Break-Even Point</p>
+          <p class="be-desc" id="break-even-subtext">&#8212;</p>
+        </div>
+      </div>
+
+      <div class="chart-box">
+        <div class="chart-hed">The monthly cost of borrowing your cash &#8212; what each option adds to your bills</div>
+        <div class="chart-wrap"><canvas id="costChart"></canvas></div>
+      </div>
+      <div class="chart-box">
+        <div class="chart-hed">Which is cheaper at your time horizon? &#8212; cumulative HELOC advantage</div>
+        <div class="chart-wrap"><canvas id="paymentChart"></canvas></div>
+      </div>
+
+      <div class="horizon-box">
+        <h3>Total Cost of Borrowing by Time Horizon</h3>
+        <p class="horizon-note">Closing costs + interest paid to access your borrowed amount. Lower is better. +2% and +4% columns show HELOC rate-shock scenarios.</p>
+        <div style="overflow-x:auto;">
+          <table class="htable">
+            <thead>
+              <tr>
+                <th>Horizon</th><th class="hc-h">HELOC</th>
+                <th class="hc-h" style="color:#5a7aaa;font-size:0.58rem;">HELOC +2%</th>
+                <th class="hc-h" style="color:#8a9ab5;font-size:0.58rem;">HELOC +4%</th>
+                <th class="hc-r">Refi</th><th>Verdict</th>
+              </tr>
+            </thead>
+            <tbody id="horizon-tbody"></tbody>
+          </table>
+        </div>
+      </div>
+    </main>
+  </div>
+</section>
+
+<section class="lender-section" id="get-quotes">
+  <div class="lender-inner">
+    <div class="lender-top">
+      <h2 class="lender-hed">Ready to get real rates?</h2>
+    </div>
+
+    <div class="lender-tier">
+      <p class="lender-tier-label">Compare multiple lenders at once</p>
+      <div class="lender-grid lender-grid-2">
+        <a href="https://www.lendingtree.com/home/home-equity/?itype=heloc" class="lender-card" target="_blank" rel="noopener sponsored">
+          <p class="lc-tag">HELOC + Refi &#183; Compare 20+ lenders</p>
+          <p class="lc-name">LendingTree</p>
+          <p class="lc-why">One form, competing offers from multiple lenders. Best starting point if you haven't decided between HELOC and refi yet.</p>
+          <span class="lc-cta">Compare Rates &#8594;</span>
+        </a>
+        <a href="https://www.bankrate.com/home-equity/heloc-rates/" class="lender-card" target="_blank" rel="noopener">
+          <p class="lc-tag">Rate Tables &#183; Updated daily</p>
+          <p class="lc-name">Bankrate</p>
+          <p class="lc-why">Independent HELOC and refi rate rankings from dozens of lenders. Good for research and benchmarking before applying anywhere.</p>
+          <span class="lc-cta">See Today's Rates &#8594;</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="lender-tier">
+      <p class="lender-tier-label">If you're leaning HELOC</p>
+      <div class="lender-grid">
+        <a href="https://www.figure.com/home-equity-line/" class="lender-card" target="_blank" rel="noopener sponsored">
+          <p class="lc-tag">Fastest funding</p>
+          <p class="lc-name">Figure</p>
+          <p class="lc-why">Approval in 5 minutes, funding in as few as 5 days. Note: requires a full draw at closing &#8212; functions more like a home equity loan than a revolving line.</p>
+          <span class="lc-cta">Get HELOC Rate &#8594;</span>
+        </a>
+        <a href="https://www.alliantcreditunion.org/home-loans/home-equity" class="lender-card" target="_blank" rel="noopener">
+          <p class="lc-tag">Lowest fees &#183; Credit union</p>
+          <p class="lc-name">Alliant Credit Union</p>
+          <p class="lc-why">Covers closing costs on HELOCs up to $250K. Below-average rates, no annual fee, no inactivity fee. Membership required (easy to qualify).</p>
+          <span class="lc-cta">Check Rates &#8594;</span>
+        </a>
+        <a href="https://www.navyfederal.org/loans-cards/mortgage/home-equity/" class="lender-card" target="_blank" rel="noopener">
+          <p class="lc-tag">Military &#183; Up to 95% LTV</p>
+          <p class="lc-name">Navy Federal</p>
+          <p class="lc-why">Military members and families can access up to 95% CLTV &#8212; well above standard limits. 20-year draw period available.</p>
+          <span class="lc-cta">See If You Qualify &#8594;</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="lender-tier">
+      <p class="lender-tier-label">If you're leaning Cash-Out Refi</p>
+      <div class="lender-grid lender-grid-2">
+        <a href="https://better.com/mortgage/refinance" class="lender-card" target="_blank" rel="noopener sponsored">
+          <p class="lc-tag">Fully online &#183; No origination fee</p>
+          <p class="lc-name">Better.com</p>
+          <p class="lc-why">No origination fee, fully digital process. Pre-approval in 3 minutes. Best for borrowers who prefer a streamlined online experience.</p>
+          <span class="lc-cta">Check My Rate &#8594;</span>
+        </a>
+        <a href="https://www.sofi.com/home-loans/refinance/" class="lender-card" target="_blank" rel="noopener sponsored">
+          <p class="lc-tag">No origination fee &#183; Loan officer support</p>
+          <p class="lc-name">SoFi</p>
+          <p class="lc-why">No origination fees on refis, dedicated loan officers, rate discount for SoFi members. Also offers HELOCs.</p>
+          <span class="lc-cta">Check My Rate &#8594;</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="free-resources">
+      <p class="fr-label">Free resources &#8212; no affiliation, no sales pitch</p>
+      <div class="fr-grid">
+        <a href="https://www.consumerfinance.gov/consumer-tools/mortgages/" class="fr-card" target="_blank" rel="noopener">
+          <p class="fr-name">CFPB Consumer Tools</p>
+          <p class="fr-desc">Free neutral information on HELOCs and refinancing from the federal consumer watchdog. File complaints against lenders here.</p>
+        </a>
+        <a href="https://www.hud.gov/i_want_to/talk_to_a_housing_counselor" class="fr-card" target="_blank" rel="noopener">
+          <p class="fr-name">HUD-Approved Housing Counselors</p>
+          <p class="fr-desc">Free or low-cost one-on-one guidance from government-approved advisors. Especially helpful if you're uncertain which option fits your finances.</p>
+        </a>
+        <a href="https://www.irs.gov/publications/p936" class="fr-card" target="_blank" rel="noopener">
+          <p class="fr-name">IRS Publication 936</p>
+          <p class="fr-desc">The official IRS guide to home mortgage interest deductions. Covers TCJA rules, the $750K limit, and which home expenses qualify.</p>
+        </a>
+      </div>
+    </div>
+
+    <p class="lender-disc"><strong style="color:rgba(255,255,255,0.6);">Advertiser Disclosure:</strong> Some links above are affiliate links &#8212; we may earn a referral fee if you apply through them, at no cost to you. This does not affect our calculator, editorial content, or lender rankings. Navy Federal, Alliant, Bankrate, and all free resource links are not affiliate relationships.</p>
+  </div>
+</section>
+
+<section class="edu-section" id="learn">
+  <div class="edu-wrap">
+    <div class="edu-masthead">
+      <h2 class="edu-title">The Complete<br/>2026 Guide</h2>
+      <button class="edu-expand-all" id="edu-expand-btn">Expand all sections</button>
+    </div>
+
+    <div class="edu-topic" id="edu-1">
+      <button class="edu-topic-btn" aria-expanded="false" aria-controls="edu-body-1">
+        <span class="edu-topic-num">01</span>
+        <span class="edu-topic-text">
+          <span class="edu-topic-title">Before You Apply: Documents, Timelines &amp; Credit Scores</span>
+          <span class="edu-topic-teaser">What lenders will ask for, how long each process takes, and what your credit score actually means for your rate.</span>
+        </span>
+        <span class="edu-topic-chevron">&#9660;</span>
+      </button>
+      <div class="edu-topic-body" id="edu-body-1" role="region">
+        <div class="edu-topic-inner"><div class="edu-content">
+          <h4>Documents you'll need &#8212; HELOC</h4>
+          <p>Expect to provide: a government-issued photo ID, your Social Security number, the two most recent pay stubs, W-2s for the past two years, two months of bank statements (with explanations for large deposits), your most recent mortgage statement, homeowners insurance declaration page, and your property tax bill. Self-employed borrowers also need two years of full tax returns (personal and business) plus a year-to-date profit-and-loss statement.</p>
+          <h4>Documents you'll need &#8212; Cash-Out Refinance</h4>
+          <p>Everything above, plus: a completed Uniform Residential Loan Application (Form 1003), your current mortgage payoff statement, and complete tax returns with all schedules. Fannie Mae requires your existing mortgage to be at least 12 months old before a cash-out refi. Because the lender is originating an entirely new first mortgage, underwriting is significantly more thorough.</p>
+          <h4>How long does it take?</h4>
+          <p><strong>HELOC:</strong> 2&#8211;6 weeks at traditional banks and credit unions. Online lenders (Figure, Better) can fund in 5&#8211;14 days. Federal law requires a mandatory 3-day right of rescission between HELOC closing and funding &#8212; your lender cannot waive this.</p>
+          <p><strong>Cash-out refi:</strong> 30&#8211;60 days is typical, driven by full appraisal, title work, and mortgage underwriting. Under ideal conditions some lenders achieve 3&#8211;4 weeks; 45&#8211;60 days is common.</p>
+          <h4>What your credit score actually determines</h4>
+          <p>Lenders advertise "620 minimum" &#8212; but that's the floor, not a meaningful guide. Here's what actually happens by tier:</p>
+          <table>
+            <tr><th>Score</th><th>What to expect</th></tr>
+            <tr><td>Below 620</td><td>No HELOC approval. FHA or VA cash-out refi may still be possible.</td></tr>
+            <tr><td>620&#8211;659</td><td>Very few lenders. Rates 2&#8211;4% above best available. LTV capped at 80%.</td></tr>
+            <tr><td>660&#8211;679</td><td>Approval likely with strong compensating factors. Rates ~1.5&#8211;2% above best.</td></tr>
+            <tr><td>680&#8211;719</td><td>Good access. Wide lender choice. Rates ~0.5&#8211;1% above best.</td></tr>
+            <tr><td>720&#8211;759</td><td>Premium tier. Best rates at most lenders.</td></tr>
+            <tr><td>760+</td><td>Best available terms, lowest margins, maximum LTV access.</td></tr>
+          </table>
+          <p>The real cost difference matters. On a $75,000 HELOC, the gap between a 760 and 660 score can mean ~$109 more per month in interest &#8212; over $13,000 extra over 10 years.</p>
+          <h4>Debt-to-income ratio limits</h4>
+          <p>For HELOCs, most lenders cap DTI at 43&#8211;50%; the best rates go to borrowers under 36%. For conventional cash-out refis, Fannie Mae's automated underwriting allows up to 50% DTI. FHA allows up to 55%. VA has no official DTI limit but focuses on residual income.</p>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="edu-topic" id="edu-2">
+      <button class="edu-topic-btn" aria-expanded="false" aria-controls="edu-body-2">
+        <span class="edu-topic-num">02</span>
+        <span class="edu-topic-text">
+          <span class="edu-topic-title">The True Cost of Each Option</span>
+          <span class="edu-topic-teaser">Closing costs, annual fees, early termination penalties &#8212; and the hidden tradeoffs in "no-fee" offers.</span>
+        </span>
+        <span class="edu-topic-chevron">&#9660;</span>
+      </button>
+      <div class="edu-topic-body" id="edu-body-2" role="region">
+        <div class="edu-topic-inner"><div class="edu-content">
+          <h4>HELOC closing costs: the real picture</h4>
+          <p>Standard HELOC closing costs run <strong>2&#8211;5% of the credit line</strong>, or roughly $300&#8211;$2,000 for a $75,000 line. Many lenders advertise "$0 closing costs" &#8212; and this is genuinely available &#8212; but almost always with strings attached.</p>
+          <div class="edu-warning"><p><strong>The no-fee tradeoff:</strong> Most zero-closing-cost HELOCs include an early termination fee of $200&#8211;$1,500 if you close the account within 24&#8211;36 months. Truist reclaims up to $10,000 in waived costs if you close within 36 months. Bank of America charges $450 if you close within 36 months. U.S. Bank charges 1% of the original line (up to $500) within 30 months. Always ask about early closure penalties before signing.</p></div>
+          <h4>HELOC fees you might not expect</h4>
+          <ul>
+            <li><strong>Annual maintenance fee:</strong> $50&#8211;$250/year, charged even when the line is unused.</li>
+            <li><strong>Inactivity fee:</strong> Triggered after 12+ months with no draws. Not universal &#8212; Alliant Credit Union doesn't charge one, many banks do.</li>
+            <li><strong>Transaction fees:</strong> $10&#8211;$50 per wire or cashier's check draw at some lenders.</li>
+            <li><strong>Minimum draw requirements:</strong> Some lenders require a $5,000&#8211;$10,000 initial draw at closing, or minimum $300&#8211;$500 per transaction.</li>
+            <li><strong>Rate lock/conversion fees:</strong> If you want to fix a portion of your variable balance, expect fees of 0.25&#8211;1.0%.</li>
+          </ul>
+          <h4>Cash-out refi closing costs</h4>
+          <p>Expect to pay <strong>2&#8211;5% of the new loan amount</strong> &#8212; on a $350,000 loan, that's $7,000&#8211;$17,500 upfront. Components: origination fee (0.5&#8211;1.5%), new title insurance (0.5&#8211;1.0%), appraisal ($400&#8211;$700), and settlement fees (~$1,000&#8211;$1,500). "No-cost" refis roll fees into a 0.125&#8211;0.25% higher rate &#8212; you pay them over time instead of upfront.</p>
+          <table>
+            <tr><th>Cost item</th><th>HELOC</th><th>Cash-Out Refi</th></tr>
+            <tr><td>Origination fee</td><td>$0&#8211;$1,000 (often waived)</td><td>0.5%&#8211;1.5% of loan</td></tr>
+            <tr><td>Appraisal</td><td>$350&#8211;$700 (often waived via AVM)</td><td>$400&#8211;$700 (almost always required)</td></tr>
+            <tr><td>Title work</td><td>$75&#8211;$250</td><td>0.5%&#8211;1.0% of loan</td></tr>
+            <tr><td>Annual fee</td><td>$50&#8211;$250/yr (varies)</td><td>None</td></tr>
+            <tr><td><strong>Typical total</strong></td><td><strong>$0&#8211;$2,000</strong></td><td><strong>$7,000&#8211;$17,500 on $350K</strong></td></tr>
+          </table>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="edu-topic" id="edu-3">
+      <button class="edu-topic-btn" aria-expanded="false" aria-controls="edu-body-3">
+        <span class="edu-topic-num">03</span>
+        <span class="edu-topic-text">
+          <span class="edu-topic-title">How HELOCs Actually Work</span>
+          <span class="edu-topic-teaser">Variable rate mechanics, the draw-to-repayment payment jump, when lenders can freeze your line, and how it hits your credit report.</span>
+        </span>
+        <span class="edu-topic-chevron">&#9660;</span>
+      </button>
+      <div class="edu-topic-body" id="edu-body-3" role="region">
+        <div class="edu-topic-inner"><div class="edu-content">
+          <h4>How your rate is calculated &#8212; and when it changes</h4>
+          <p>Your HELOC rate = <strong>U.S. Prime Rate + your lender's margin</strong>. Prime is currently 6.75% (it moves directly with Fed rate changes). Margins range from prime minus 0.50% (excellent credit at credit unions) to prime plus 3% (fair credit), with ~0.75% being industry average. Most HELOCs adjust monthly. After a Fed rate change, your rate shifts within 1&#8211;2 billing cycles. Lifetime caps are typically 18%. <strong>Many prime-based HELOCs have no periodic caps</strong> &#8212; meaning a rapid series of Fed hikes can increase your rate substantially within a single year.</p>
+          <h4>The repayment-phase payment shock is real</h4>
+          <p>During draw years (1&#8211;10), you pay interest only. When repayment begins (years 11&#8211;30), your payment converts to fully amortizing principal + interest.</p>
+          <div class="edu-callout"><p><strong>Example:</strong> $60,000 HELOC at 7.25% &#8212; draw phase: $363/mo &#8212; repayment phase: $474/mo (a 31% jump). If rates have risen to 9.25% by year 10, the repayment payment becomes $551/mo &#8212; a 52% jump from where you started. Plan for this well before year 10 arrives.</p></div>
+          <h4>When lenders can legally freeze your HELOC</h4>
+          <p>Under Regulation Z, lenders can only freeze or reduce a HELOC under specific conditions: a significant property value decline (original equity cushion shrinks by 50%+), a material change in your financial circumstances, default on a material obligation, or specific government regulatory actions. They cannot freeze lines arbitrarily. During 2008, Countrywide froze an estimated 122,000 HELOC lines &#8212; even accounts with perfect payment histories. The risk is real if home values fall significantly.</p>
+          <h4>How a HELOC affects your credit</h4>
+          <p>HELOCs are typically reported as revolving credit. FICO scores exclude HELOCs from revolving utilization calculations (because they're secured by the home), but VantageScore may include balances. Closing a HELOC can hurt your score by reducing total available credit &#8212; even if you never drew from it.</p>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="edu-topic" id="edu-4">
+      <button class="edu-topic-btn" aria-expanded="false" aria-controls="edu-body-4">
+        <span class="edu-topic-num">04</span>
+        <span class="edu-topic-text">
+          <span class="edu-topic-title">How Cash-Out Refinancing Actually Works</span>
+          <span class="edu-topic-teaser">Seasoning requirements, rate locks, discount points, low appraisals, and the difference between conventional, FHA, and VA cash-out refis.</span>
+        </span>
+        <span class="edu-topic-chevron">&#9660;</span>
+      </button>
+      <div class="edu-topic-body" id="edu-body-4" role="region">
+        <div class="edu-topic-inner"><div class="edu-content">
+          <h4>Seasoning: how long you must wait</h4>
+          <p>For conventional loans, you must have owned the home for at least <strong>12 months</strong>. Exception: "delayed financing" allows cash-out after 6 months if you paid cash originally. FHA requires 12 months ownership and occupancy. VA requires 210 days plus 6 consecutive payments when refinancing an existing VA loan.</p>
+          <h4>Rate locks and float-down options</h4>
+          <p>Standard lock periods: 30, 45, or 60 days. For cash-out refis, 45&#8211;60 days is advisable given full appraisal timelines. Longer locks cost 0.125&#8211;0.25% more. If rates drop after you lock, a <strong>float-down option</strong> lets you capture the lower rate &#8212; usually requiring rates to drop 0.25&#8211;0.50%+, costing 0.25&#8211;1.0% extra, and requiring you to actively request it (it's not automatic).</p>
+          <h4>Discount points: when they make sense</h4>
+          <p>Each point costs 1% of the loan amount and reduces your rate by ~0.25%. On a $400,000 loan, one point = $4,000, saving ~$67/month. Break-even: ~60 months. Points generally make less sense on cash-out refis than purchase loans &#8212; you may refinance again within a few years, preventing you from recouping the upfront cost.</p>
+          <h4>What happens if the appraisal comes in low</h4>
+          <p>A low appraisal limits how much cash you can extract. Options: request a Reconsideration of Value with better comparable sales data; accept less cash; bring money to closing to maintain LTV ratios; switch lenders for a fresh appraisal; wait for appreciation. Appraisal waivers are rare for cash-out refis.</p>
+          <h4>Conventional vs. FHA vs. VA</h4>
+          <table>
+            <tr><th>Feature</th><th>Conventional</th><th>FHA</th><th>VA</th></tr>
+            <tr><td>Max LTV</td><td>80%</td><td>80%</td><td>Up to 100%</td></tr>
+            <tr><td>Min credit score</td><td>620 (740+ best rates)</td><td>580 typical</td><td>620 typical</td></tr>
+            <tr><td>Mortgage insurance</td><td>PMI if &gt;80% (removable)</td><td>Lifetime MIP (~0.55%/yr)</td><td>2.15&#8211;3.30% one-time fee</td></tr>
+            <tr><td>Investment properties</td><td>Yes (70% LTV)</td><td>No</td><td>No</td></tr>
+            <tr><td>Best for</td><td>Most with 20%+ equity</td><td>Lower credit scores</td><td>Veterans: highest LTV, no monthly MI</td></tr>
+          </table>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="edu-topic" id="edu-5">
+      <button class="edu-topic-btn" aria-expanded="false" aria-controls="edu-body-5">
+        <span class="edu-topic-num">05</span>
+        <span class="edu-topic-text">
+          <span class="edu-topic-title">HELOC vs. Home Equity Loan: What's the Difference?</span>
+          <span class="edu-topic-teaser">Both tap equity without touching your first mortgage &#8212; one is a credit line, the other is a fixed second mortgage. When each is the smarter choice.</span>
+        </span>
+        <span class="edu-topic-chevron">&#9660;</span>
+      </button>
+      <div class="edu-topic-body" id="edu-body-5" role="region">
+        <div class="edu-topic-inner"><div class="edu-content">
+          <h4>The core difference</h4>
+          <p>A <strong>HELOC</strong> is revolving &#8212; you draw what you need, when you need it, up to the limit, and your payment is interest-only on the drawn amount. A <strong>Home Equity Loan (HEL)</strong> delivers a fixed lump sum upfront at a fixed rate, with identical monthly payments for the life of the loan. Current rates (April 2026): HELOC ~7.02% variable; HEL ~7.5&#8211;8.0% fixed.</p>
+          <h4>When a home equity loan beats a HELOC</h4>
+          <ul>
+            <li>You have a firm contractor bid and know exactly what you need</li>
+            <li>You want payment predictability &#8212; same check every month, no surprises</li>
+            <li>You're concerned about rising rates and want to lock in now</li>
+            <li>You want to avoid the HELOC repayment-phase payment shock</li>
+          </ul>
+          <h4>When a HELOC beats a home equity loan</h4>
+          <ul>
+            <li>Your expenses are phased or uncertain (ongoing renovation, emergency fund)</li>
+            <li>You may not use the full amount and only want to pay interest on what you borrow</li>
+            <li>You want a financial safety net with no obligation to draw</li>
+            <li>You expect rates to continue falling</li>
+          </ul>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="edu-topic" id="edu-6">
+      <button class="edu-topic-btn" aria-expanded="false" aria-controls="edu-body-6">
+        <span class="edu-topic-num">06</span>
+        <span class="edu-topic-text">
+          <span class="edu-topic-title">Tax Rules: What Qualifies for the Deduction?</span>
+          <span class="edu-topic-teaser">TCJA rules made permanent in 2025, which expenses qualify, how to document them, and what happens with mixed-use funds.</span>
+        </span>
+        <span class="edu-topic-chevron">&#9660;</span>
+      </button>
+      <div class="edu-topic-body" id="edu-body-6" role="region">
+        <div class="edu-topic-inner"><div class="edu-content">
+          <h4>The current rule (permanent as of July 4, 2025)</h4>
+          <p>Under the Tax Cuts and Jobs Act &#8212; made permanent by the One Big Beautiful Bill Act (Public Law 119-21) &#8212; mortgage interest is deductible only when funds are used to <strong>"buy, build, or substantially improve"</strong> the qualifying residence. The combined qualifying debt cap is <strong>$750,000</strong> (was set to revert to $1M after 2025; OBBBA prevented that). About 10% of taxpayers currently itemize. The OBBBA also reinstated deductibility of PMI premiums beginning 2026 for itemizers.</p>
+          <h4>What qualifies as a "substantial improvement"</h4>
+          <p><strong>Qualifies:</strong> kitchen/bathroom remodels, room additions, new roof, HVAC replacement, foundation repair, finishing a basement, solar panels, adding a deck, building an ADU. <strong>Does not qualify:</strong> painting, appliance repairs, patching drywall, carpet cleaning, routine maintenance.</p>
+          <h4>Mixed-use funds: partial deductibility</h4>
+          <p>If you use $40,000 of a $60,000 HELOC for a kitchen remodel and $20,000 for debt payoff, you can only deduct 67% of the interest. The cleanest approach: open a <strong>dedicated bank account exclusively for improvement funds</strong> and draw only from it for qualifying expenses. This creates a clear paper trail for any IRS review.</p>
+          <h4>Documentation to keep</h4>
+          <p>Keep for the duration of homeownership plus 7 years after sale: Form 1098 (annual interest statement), original loan documents, contractor contracts and itemized invoices, building permits, bank statements showing fund flow, before-and-after photos, lien waivers, and cancelled checks. Improvement costs increase your home's cost basis, reducing capital gains taxes when you sell.</p>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="edu-topic" id="edu-7">
+      <button class="edu-topic-btn" aria-expanded="false" aria-controls="edu-body-7">
+        <span class="edu-topic-num">07</span>
+        <span class="edu-topic-text">
+          <span class="edu-topic-title">What Can Go Wrong</span>
+          <span class="edu-topic-teaser">Default timelines, foreclosure risk, what happens when you sell or refinance with a HELOC open, and the bankruptcy scenario.</span>
+        </span>
+        <span class="edu-topic-chevron">&#9660;</span>
+      </button>
+      <div class="edu-topic-body" id="edu-body-7" role="region">
+        <div class="edu-topic-inner"><div class="edu-content">
+          <h4>If you miss HELOC payments</h4>
+          <p>Month 1: late fees ($25&#8211;$100). Month 2: default status, credit damage begins. Month 3: demand letter with 30-day cure period. Month 4+: formal notice of default. Unresolved: pre-foreclosure, then foreclosure proceedings. Only 0.88% of HELOC accounts are currently 90+ days delinquent. If you're struggling, contact the lender immediately &#8212; forbearance (3&#8211;12 months) and loan modification are available before formal default proceedings.</p>
+          <h4>Foreclosure risk: first lien vs. second lien</h4>
+          <p>A cash-out refi sits in <strong>first lien position</strong> &#8212; the lender is paid first from foreclosure proceeds and has strong incentive to move quickly. A HELOC as a <strong>second lien</strong> means the lender is behind the first mortgage. Second-lien foreclosure is rarer in practice, but HELOC lenders do foreclose when significant equity exists. Both products put your home at risk.</p>
+          <h4>Selling your home with an open HELOC</h4>
+          <p>Routine. The title company pays all liens from sale proceeds in priority order. Even a zero-balance HELOC must be formally paid off and the lien released at closing. Early termination fees may apply if the account is less than 2&#8211;3 years old. Some lenders freeze draw access when the property is listed &#8212; don't plan on drawing from the HELOC after listing.</p>
+          <h4>Refinancing your first mortgage with a HELOC outstanding</h4>
+          <p>Requires HELOC <strong>subordination</strong> &#8212; the HELOC lender must formally agree to stay in second position behind your new first mortgage. Expect 2&#8211;4 extra weeks on the timeline, a ~$250 subordination fee, and a possible 0.125&#8211;0.375% rate bump. The HELOC lender is not required to agree. If they refuse, you must pay off the HELOC first. Many borrowers don't learn this until mid-application.</p>
+          <h4>HELOCs in bankruptcy</h4>
+          <p>In Chapter 7, discharge eliminates personal liability but the lien survives &#8212; the lender can still foreclose. Second-mortgage liens cannot be stripped in Chapter 7. In Chapter 13, borrowers can include the HELOC in a 3&#8211;5 year repayment plan, with "lien stripping" available if the home is worth less than the first mortgage balance.</p>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="edu-topic" id="edu-8">
+      <button class="edu-topic-btn" aria-expanded="false" aria-controls="edu-body-8">
+        <span class="edu-topic-num">08</span>
+        <span class="edu-topic-text">
+          <span class="edu-topic-title">Other Ways to Access Your Equity</span>
+          <span class="edu-topic-teaser">Home equity investments (no monthly payments), personal loans, and 401(k) loans &#8212; when they make more sense.</span>
+        </span>
+        <span class="edu-topic-chevron">&#9660;</span>
+      </button>
+      <div class="edu-topic-body" id="edu-body-8" role="region">
+        <div class="edu-topic-inner"><div class="edu-content">
+          <h4>Home Equity Investments (HEIs) &#8212; no monthly payments</h4>
+          <p>Companies like <a href="https://www.hometap.com" target="_blank" rel="noopener">Hometap</a>, <a href="https://www.point.com" target="_blank" rel="noopener">Point/Splitero</a>, and <a href="https://www.unison.com" target="_blank" rel="noopener">Unison</a> provide a lump sum in exchange for a percentage of your home's future appreciation. No monthly payments, no interest rate. Terms 10&#8211;30 years. Credit requirements as low as 500&#8211;620.</p>
+          <div class="edu-warning"><p><strong>Important:</strong> The effective cost can far exceed a HELOC if your home appreciates significantly &#8212; providers may take 15&#8211;30% of your home's value at settlement. Best suited for homeowners with poor credit, those who genuinely cannot afford monthly payments, or retirees on fixed incomes. The CFPB has begun actively monitoring this market.</p></div>
+          <h4>Personal loans &#8212; for smaller amounts</h4>
+          <p>Below roughly $15,000&#8211;$20,000, HELOC closing costs erode the rate advantage. Average personal loan rates run ~12% versus ~7% for HELOCs. Personal loans fund in 1&#8211;5 days versus 2&#8211;6 weeks. Key advantage: your home is not collateral.</p>
+          <h4>401(k) loans &#8212; proceed with caution</h4>
+          <p>Maximum: the lesser of $50,000 or 50% of your vested balance. Repayable over 5 years via payroll deductions at ~prime+1% (currently ~8.5&#8211;9.5%), with interest going back to your own account. No credit check. Critical risk: if you leave your employer, the remaining balance is due by your next tax filing deadline &#8212; unpaid amounts become a taxable distribution plus a 10% early withdrawal penalty if under age 59&#189;. The missed market returns (historically 8&#8211;10%/year) are the real hidden cost.</p>
+          <h4>FHA Title I home improvement loans</h4>
+          <p>For homeowners with little or no equity. Maximum $25,000 for single-family homes. Loans under $7,500 require no collateral. No equity requirement, no prepayment penalty. Main limitation: very few lenders offer them, making availability the biggest barrier.</p>
+        </div></div>
+      </div>
+    </div>
+
+    <div class="edu-topic" id="edu-9">
+      <button class="edu-topic-btn" aria-expanded="false" aria-controls="edu-body-9">
+        <span class="edu-topic-num">09</span>
+        <span class="edu-topic-text">
+          <span class="edu-topic-title">2026 Market Outlook</span>
+          <span class="edu-topic-teaser">Where HELOC rates are likely headed, what the Fed's split forecasts mean, and whether home prices support or erode your equity.</span>
+        </span>
+        <span class="edu-topic-chevron">&#9660;</span>
+      </button>
+      <div class="edu-topic-body" id="edu-body-9" role="region">
+        <div class="edu-topic-inner"><div class="edu-content">
+          <h4>The Fed in 2026</h4>
+          <p>The federal funds rate stands at 3.50&#8211;3.75% after the Fed held steady at its March 18, 2026 meeting. The March dot plot is split: 7 members project no further cuts in 2026, 7 project one cut, and 5 project more. The median implies one additional 25 bps cut. PCE inflation was revised up to 2.7%. Fed Chair Powell's term expires May 15, 2026, introducing some policy uncertainty.</p>
+          <p>For HELOC borrowers: at 7.02%, rates are near a 3-year low. One more cut would push averages toward 6.75&#8211;6.85%. The era of rapidly falling HELOC rates (from 10.16% in January 2024) is largely over. Borrowers waiting for significantly lower rates may be waiting a long time.</p>
+          <h4>Home price outlook</h4>
+          <p>Major forecasts cluster around 0&#8211;4% appreciation in 2026: NAR +4%, Goldman Sachs +1.9%, Morgan Stanley +2%, Zillow +0.9&#8211;1.2%, J.P. Morgan 0%. Inventory is ~20% above year-ago levels but below pre-2020 norms. Stable prices mean tappable equity (currently ~$11 trillion nationally) holds near current levels.</p>
+          <h4>The 2026 conforming loan limit</h4>
+          <p>FHFA baseline: <strong>$832,750</strong> (up from $806,500 in 2025). High-cost area ceiling: <strong>$1,249,125</strong>. Borrowers needing a new loan above these limits face jumbo rates, typically 0.25&#8211;0.50% higher than conforming.</p>
+        </div></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="faq-section" id="faq">
+  <div class="faq-inner">
+    <aside>
+      <h2 class="faq-sb-hed">Quick Answers</h2>
+      <p class="faq-sb-note">The questions we hear most often.</p>
+    </aside>
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is it better to get a HELOC or cash-out refinance in 2026?<span class="faq-chev">&#9660;</span></button>
+        <div class="faq-a"><p>For most homeowners with a mortgage rate below 5%, a HELOC is the better choice. Cash-out refinancing replaces your entire mortgage at today's 6.37% rate &#8212; raising your payment on the full existing balance, not just the new cash. Approximately 70% of homeowners hold rates below 5%; those borrowers would pay hundreds more per month to refinance. The HELOC preserves your existing rate. Run your specific numbers in the calculator above &#8212; the math is personal.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What are the real downsides of a HELOC?<span class="faq-chev">&#9660;</span></button>
+        <div class="faq-a"><p>Three main risks: (1) <strong>Variable rates</strong> &#8212; if the Fed raises rates, your payment rises immediately. Many HELOCs have no periodic caps, so rate increases are unlimited per year (up to the lifetime cap, typically 18%). (2) <strong>Payment shock</strong> at year 10 &#8212; payments jump 20&#8211;50% when you switch from interest-only to full principal + interest. (3) <strong>Credit line freeze risk</strong> &#8212; if your home value drops significantly, your lender may legally freeze the line. See section 03 above for full detail.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What happens when the HELOC draw period ends?<span class="faq-chev">&#9660;</span></button>
+        <div class="faq-a"><p>After the draw period (typically 10 years), you can no longer borrow from the line. Your payment converts from interest-only to fully amortizing principal + interest over a 20-year repayment period &#8212; typically a 20&#8211;50% payment increase. Plan for this 2&#8211;3 years in advance: build cash reserves, pay down the balance during the draw period, or explore converting to a fixed-rate home equity loan before the transition.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Is HELOC interest tax deductible in 2026?<span class="faq-chev">&#9660;</span></button>
+        <div class="faq-a"><p>Only if proceeds are used to "buy, build, or substantially improve" the home securing the loan. The $750,000 combined qualifying debt cap applies &#8212; made permanent in 2025. Funds used for debt consolidation, vacations, or personal expenses are not deductible. About 10% of taxpayers now itemize. See section 06 above for documentation requirements and mixed-use allocation rules.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">How much equity do I need for a HELOC?<span class="faq-chev">&#9660;</span></button>
+        <div class="faq-a"><p>Most lenders allow a combined loan-to-value (CLTV) of 80&#8211;85%. Some go to 90% for 740+ credit scores; select credit unions go to 95&#8211;100%. Example: $400,000 home &#215; 85% = $340,000 max total debt. With a $250,000 mortgage, you could access up to $90,000 via a HELOC. For cash-out refis, conventional loans cap at 80% LTV; VA loans allow up to 100% for veterans.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Are closing costs really much higher for a cash-out refi?<span class="faq-chev">&#9660;</span></button>
+        <div class="faq-a"><p>Significantly higher in absolute terms. A cash-out refi costs 2&#8211;5% of the new loan amount &#8212; $7,000&#8211;$17,500 on a $350,000 loan. HELOCs often advertise zero closing costs, though those typically come with early termination fees of $200&#8211;$1,500 if you close within 24&#8211;36 months. This closing cost gap is the primary reason HELOCs are cheaper for short holding periods, even at slightly higher interest rates.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">Can I refinance my first mortgage if I have a HELOC?<span class="faq-chev">&#9660;</span></button>
+        <div class="faq-a"><p>Yes, but it requires HELOC subordination &#8212; your HELOC lender must formally agree to remain in second position behind your new first mortgage. Expect 2&#8211;4 extra weeks on the refinance timeline, a ~$250 subordination fee, and a possible 0.125&#8211;0.375% rate bump. The HELOC lender is not obligated to agree. If they refuse, you'd need to pay off the HELOC first. Many borrowers don't discover this requirement until they're mid-application.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What happens to my HELOC when I sell my home?<span class="faq-chev">&#9660;</span></button>
+        <div class="faq-a"><p>The HELOC must be paid off in full at closing, with proceeds from the sale. Even a zero-balance HELOC must be formally released from title. Early termination fees may apply if the account is less than 2&#8211;3 years old. Some lenders freeze draw access when the property is listed &#8212; don't plan on drawing from the HELOC after you've listed for sale.</p></div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false">What credit score do I actually need?<span class="faq-chev">&#9660;</span></button>
+        <div class="faq-a"><p>The stated minimum for both products is 620 &#8212; but that's the floor. The meaningful tiers are 680 (good access), 720 (premium rates), and 760+ (best available terms). On a $75,000 HELOC, the gap between a 760 and 660 score can mean ~$109 more per month in interest &#8212; over $13,000 extra over 10 years. If you're below 720, it's worth spending 3&#8211;6 months improving your score before applying.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-mast">Equity Wiser</div>
+    <div class="footer-cols">
+      <div class="footer-about">Equity Wiser provides free, unbiased calculators and guides to help homeowners make smarter home equity decisions. We do not sell your data. Revenue is earned through disclosed affiliate partnerships that do not influence our editorial content or lender rankings.</div>
+      <div class="footer-col">
+        <p class="footer-col-hed">Tools</p>
+        <ul>
+          <li><a href="/">HELOC vs Refi Calculator</a></li>
+          <li><a href="#">HELOC Payment Calculator</a></li>
+          <li><a href="#">Cash-Out Refi Calculator</a></li>
+          <li><a href="#">Home Equity Calculator</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <p class="footer-col-hed">Learn</p>
+        <ul>
+          <li><a href="#learn">Complete 2026 Guide</a></li>
+          <li><a href="#faq">FAQ</a></li>
+          <li><a href="#edu-6">Tax Rules (TCJA)</a></li>
+          <li><a href="#edu-7">What Can Go Wrong</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-btm">
+      <p class="footer-disc"><strong>Disclaimer:</strong> This calculator provides estimates for educational purposes only and does not constitute financial, tax, or legal advice. Results are based on assumptions and may not reflect your actual costs. Rates and terms vary by lender, credit score, and state. Consult a licensed mortgage professional and a tax advisor before making borrowing decisions.</p>
+      <p class="footer-copy">&#169; 2026 Equity Wiser</p>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<script src="js/rates.js"></script>
+<script src="js/calculator.js"></script>
+<script>
+  // Auto-updating date
+  document.getElementById('mast-date').textContent =
+    new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+
+  document.querySelectorAll('.faq-q').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const item = btn.closest('.faq-item');
+      const isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+      if (!isOpen) item.classList.add('open');
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+  document.querySelectorAll('.edu-topic-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const topic = btn.closest('.edu-topic');
+      const isOpen = topic.classList.contains('open');
+      topic.classList.toggle('open', !isOpen);
+      btn.setAttribute('aria-expanded', String(!isOpen));
+    });
+  });
+  const expandBtn = document.getElementById('edu-expand-btn');
+  if (expandBtn) {
+    let allOpen = false;
+    expandBtn.addEventListener('click', () => {
+      allOpen = !allOpen;
+      document.querySelectorAll('.edu-topic').forEach(t => {
+        t.classList.toggle('open', allOpen);
+        const b = t.querySelector('.edu-topic-btn');
+        if (b) b.setAttribute('aria-expanded', String(allOpen));
+      });
+      expandBtn.textContent = allOpen ? 'Collapse all sections' : 'Expand all sections';
+    });
+  }
+</script>
+</body>
+</html>

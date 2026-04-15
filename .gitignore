@@ -1,0 +1,40 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# Editor and IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dependency directories (if you ever add a build step)
+node_modules/
+
+# Build output (if you ever add a build step)
+dist/
+build/
+
+# Environment variables (never commit API keys or secrets)
+.env
+.env.local
+.env.*.local
+
+# Google Analytics / affiliate link config (if you move to a config file)
+config.local.js
