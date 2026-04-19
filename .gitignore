@@ -38,3 +38,8 @@ build/
 
 # Google Analytics / affiliate link config (if you move to a config file)
 config.local.js
+
+# Editorial / planning files — kept local, not published
+research/
+content-strategy.md
+article-directive.md
