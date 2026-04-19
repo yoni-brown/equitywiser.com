@@ -797,6 +797,15 @@ input[type="checkbox"] { width: auto; accent-color: var(--ink); }
 .edu-content a { color: var(--accent); text-underline-offset: 2px; }
 .edu-content a:hover { color: var(--ink); }
 
+.edu-read-more { margin: 1.1rem 0 0; font-family: var(--font-sans); font-size: 0.86rem; }
+.edu-read-more a { color: var(--accent); font-weight: 500; text-decoration: none; border-bottom: 1px solid var(--accent); padding-bottom: 1px; }
+.edu-read-more a:hover { color: var(--ink); border-bottom-color: var(--ink); }
+.edu-read-more + .edu-read-more { margin-top: 0.45rem; }
+
+.faq-read-more { margin: 0.7rem 0 0; font-family: var(--font-sans); font-size: 0.82rem; }
+.faq-read-more a { color: var(--accent); text-decoration: none; border-bottom: 1px dotted var(--accent); padding-bottom: 1px; }
+.faq-read-more a:hover { color: var(--ink); border-bottom: 1px solid var(--ink); }
+
 /* Credit tiers table */
 .score-tier { display: inline-block; width: 0.65rem; height: 0.65rem; border-radius: 50%; margin-right: 0.4rem; }
 .tier-best { background: var(--accent); }
