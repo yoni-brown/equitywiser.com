@@ -84,6 +84,9 @@
 
     <p>No lender has paid for favorable treatment in any article. Rate comparisons, product recommendations, caveats, and the order in which options appear on any page are determined editorially, not commercially. If that ever changes, this page will be updated to say so.</p>
 
+    <h2 class="article-h2" id="contact">Contact</h2>
+    <p>Questions, corrections, and source pointers are welcome at <span class="js-mailto" data-u="james" data-d="equitywiser.com">my contact address</span>. I read everything, though I can&rsquo;t always reply.</p>
+
   </div>
   </div>
 </article>
@@ -160,6 +163,10 @@
     new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
   var yr = document.getElementById('current-year');
   if (yr) yr.textContent = new Date().getFullYear();
+  document.querySelectorAll('.js-mailto').forEach(function(el){
+    var addr = el.dataset.u + '\u0040' + el.dataset.d;
+    el.innerHTML = '<a href="mailto:' + addr + '">' + (el.textContent.trim() || addr) + '</a>';
+  });
 </script>
 </body>
 </html>
