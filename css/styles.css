@@ -757,6 +757,28 @@ input[type="checkbox"] { width: auto; accent-color: var(--ink); }
   .footer-btm { flex-direction: column; }
   .htable { font-size: 0.7rem; }
   .htable th, .htable td { padding: 0.4rem; }
+
+  /* Nav: scrollable, tightened padding so 4 links fit 375px */
+  .mast-nav { overflow-x: auto; justify-content: flex-start; }
+  .mast-nav a { flex-shrink: 0; padding: 0.3rem 0.7rem; font-size: 0.68rem; line-height: 1.3; }
+
+  /* Calculator: stack 2-col inputs, enlarge slider thumb */
+  .field-row { grid-template-columns: 1fr; }
+  input[type="range"]::-webkit-slider-thumb { width: 22px; height: 22px; }
+
+  /* Hero scenario card: let long labels wrap instead of colliding */
+  .hd-line-num { white-space: normal; text-align: right; }
+
+  /* Rate-bar + footer tap targets */
+  .rate-item { padding: 0.25rem 0.7rem; }
+  .footer-col li { margin-bottom: 0.55rem; }
+  .footer-col a { font-size: 0.85rem; padding: 0.3rem 0; display: inline-block; }
+
+  /* Let copyright line break instead of overflowing if it ever grows */
+  .footer-copy { white-space: normal; }
+
+  /* Style the lone <code> on the author page so it doesn't look like a glitch */
+  code { font-family: var(--font-mono); font-size: 0.88em; padding: 0.05em 0.35em; background: #EAE6DC; border-radius: 2px; }
 }
 
 /* ─────────────────── EDUCATIONAL ACCORDION ─────────────────────────── */
