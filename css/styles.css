@@ -1086,6 +1086,20 @@ input[type="checkbox"] { width: auto; accent-color: var(--ink); }
   color: var(--ink-light);
   padding-top: 1rem;
   border-top: 1px solid var(--ink-faint);
+}
+.byline-link {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--ink-faint);
+  text-underline-offset: 0.2em;
+  transition: text-decoration-color 0.15s;
+}
+.byline-link:hover,
+.byline-link:focus-visible {
+  text-decoration-color: var(--ink);
+  outline: none;
+}
+.ah-byline-orphan {
   display: flex;
   gap: 0.5rem;
   flex-wrap: wrap;
