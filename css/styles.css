@@ -994,20 +994,6 @@ input[type="checkbox"] { width: auto; accent-color: var(--ink); }
   margin-bottom: 1.3rem;
 }
 
-/* Lede / drop cap */
-.article-lede {
-  font-size: 1.18rem !important;
-  line-height: 1.65 !important;
-}
-.dropcap {
-  float: left;
-  font-family: var(--font-display);
-  font-size: 4rem;
-  line-height: 0.9;
-  padding: 0.35rem 0.5rem 0 0;
-  font-weight: 700;
-  color: var(--ink);
-}
 
 /* Section headings */
 .article-h2 {
