@@ -1065,8 +1065,13 @@ input[type="checkbox"] { width: auto; accent-color: var(--ink); }
   margin-bottom: 1.2rem;
 }
 .ah-headline em {
+  display: inline-block;
+  margin-top: 0.35rem;
   font-style: italic;
   font-weight: 400;
+  font-size: 0.7em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
   color: var(--ink-mid);
 }
 .ah-dek {
