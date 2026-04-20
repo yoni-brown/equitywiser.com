@@ -110,22 +110,6 @@
       "depends_on": "rates_as_of"
     },
     {
-      "id": "hero_heloc_rate",
-      "description": "HELOC average rate on the hero card (first data row)",
-      "scope": "index.html only",
-      "find_regex": "<dt>HELOC average<small>Variable &middot; Prime \\+ ([\\d.]+)</small></dt>\\s*<dd>(\\d+\\.\\d+)<span class=\"hd-pct\">%</span></dd>",
-      "depends_on": ["heloc_avg", "heloc_vs_prime_spread"],
-      "note": "Two capture groups: the 'Prime + X' spread label and the HELOC rate itself. Update both."
-    },
-    {
-      "id": "hero_refi_rate",
-      "description": "30-yr cash-out refi rate on the hero card (second data row)",
-      "scope": "index.html only",
-      "find_regex": "<dt>30&#8209;yr cash&#8209;out refi<small>Fixed &middot; ~0.5 pt over 30&#8209;yr</small></dt>\\s*<dd>~(\\d+\\.\\d+)<span class=\"hd-pct\">%</span></dd>",
-      "depends_on": "cashout_refi_30yr",
-      "note": "If cashout_refi_30yr's spread changes (currently locked to +0.50), update the '~0.5 pt over 30-yr' label too."
-    },
-    {
       "id": "hero_sample_heloc_interest",
       "description": "'+ HELOC interest at X%: $Y' line on the hero card",
       "scope": "index.html only",
