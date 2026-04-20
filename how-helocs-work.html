@@ -1,371 +1,393 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>How HELOCs Actually Work: Draw Period, Repayment, and Payment Shock — Equity Wiser</title>
-  <meta name="description" content="How a HELOC actually works across its full life: how the rate is built, how the draw period ends in a payment jump, and what disciplined borrowers do differently. Updated April 2026." />
-  <link rel="canonical" href="https://equitywiser.com/how-helocs-work/" />
-  <meta property="og:title" content="How HELOCs Actually Work: Draw Period, Repayment, and Payment Shock" />
-  <meta property="og:description" content="The draw period feels like freedom. The repayment period feels like an ambush. Here's what's really happening at each stage." />
-  <meta property="og:url" content="https://equitywiser.com/how-helocs-work/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <link rel="preconnect" href="https://api.fontshare.com" />
-  <link href="https://api.fontshare.com/v2/css?f[]=boska@700,400&f[]=gambetta@700,500,400&f[]=general-sans@700,600,500,400&f[]=jet-brains-mono@600,400&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How HELOCs Actually Work: Draw Period, Repayment, and Payment Shock","datePublished":"2026-04-16","dateModified":"2026-04-16","author":{"@type":"Person","name":"James B. Solomon"},"publisher":{"@type":"Organization","name":"Equity Wiser"},"description":"How a HELOC actually works across its full life: how the rate is built, how the draw period ends in a payment jump, and what disciplined borrowers do differently."}</script>
+ <meta charset="UTF-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+ <title>How HELOCs Actually Work: Draw Period, Repayment, and Payment Shock — Equity Wiser</title>
+ <meta name="description" content="Draw period, repayment period, variable rate, and the payment shock at year 10 that breaks most unprepared HELOC borrowers. How it actually works." />
+ <link rel="canonical" href="https://equitywiser.com/how-helocs-work/" />
+ <meta property="og:title" content="How HELOCs Actually Work: Draw Period, Repayment, and Payment Shock" />
+ <meta property="og:description" content="Draw period, repayment period, variable rate, and the payment shock at year 10 that breaks most unprepared HELOC borrowers. How it actually works." />
+ <meta property="og:url" content="https://equitywiser.com/how-helocs-work/" />
+ <meta name="twitter:card" content="summary_large_image" />
+ <link rel="preconnect" href="https://api.fontshare.com" />
+ <link href="https://api.fontshare.com/v2/css?f[]=boska@700,400&f[]=gambetta@700,500,400&f[]=general-sans@700,600,500,400&f[]=jet-brains-mono@600,400&display=swap" rel="stylesheet" />
+ <link rel="stylesheet" href="css/styles.css" />
+ <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"How HELOCs Actually Work: Draw Period, Repayment, and Payment Shock","datePublished":"2026-04-16","dateModified":"2026-04-19","author":{"@type":"Person","name":"James B. Solomon"},"publisher":{"@type":"Organization","name":"Equity Wiser"},"description":"How a HELOC actually works across its full life: how the rate is built, how the draw period ends in a payment jump, and what disciplined borrowers do differently."}</script>
 </head>
 <body>
 
 <header class="masthead">
-  <div class="mast-inner">
-    <div class="mast-meta">
-      <span>Free · Unbiased · Educational</span>
-      <span id="mast-date"></span>
-    </div>
-    <a href="/" class="mast-name">Equity Wiser</a>
-    <div class="rate-bar">
-      <span class="rate-item"><span class="rl">30yr Fixed</span> 6.37%</span>
-      <span class="rate-item"><span class="rl">HELOC avg</span> 7.02%</span>
-      <span class="rate-item"><span class="rl">Prime</span> 6.75%</span>
-      <span class="rate-item"><span class="rl">15yr Fixed</span> 5.74%</span>
-      <span class="rate-item" style="color:var(--ink-light);font-size:0.62rem;">Freddie Mac PMMS · Apr 9, 2026</span>
-    </div>
-    <nav class="mast-nav">
-      <a href="/">Calculator</a>
-      <a href="/#learn">Guide</a>
-      <a href="/#faq">FAQ</a>
-      <a href="/#get-quotes">Get Quotes</a>
-    </nav>
+ <div class="mast-inner">
+  <div class="mast-meta">
+   <span>Free · Independent · Educational</span>
+   <span id="mast-date"></span>
   </div>
+  <a href="/" class="mast-name">Equity Wiser</a>
+  <div class="rate-bar">
+   <span class="rate-item"><span class="rl">30yr Fixed</span> 6.37%</span>
+   <span class="rate-item"><span class="rl">HELOC avg</span> 7.02%</span>
+   <span class="rate-item"><span class="rl">Prime</span> 6.75%</span>
+   <span class="rate-item"><span class="rl">15yr Fixed</span> 5.74%</span>
+   <span class="rate-item" style="color:var(--ink-light);font-size:0.62rem;">Freddie Mac PMMS · Apr 9, 2026</span>
+  </div>
+  <nav class="mast-nav">
+   <a href="/">Calculator</a>
+   <a href="/#learn">Guide</a>
+   <a href="/#faq">FAQ</a>
+   <a href="/#get-quotes">Get Quotes</a>
+  </nav>
+ </div>
 </header>
 
 <article class="article">
-  <header class="article-hero">
-    <div class="ah-inner">
-      <p class="ah-kicker">Home Equity · The Mechanics</p>
-      <h1 class="ah-headline">How HELOCs actually work:<br/><em>the rate, the shock, and the math that saves you.</em></h1>
-      <p class="ah-dek">The draw period feels like freedom. The repayment period feels like an ambush. Here's what's really happening at each stage &mdash; and what disciplined borrowers do differently.</p>
-      <div class="ah-byline">
-        <span>By James B. Solomon</span>
-        <span class="ah-dot">·</span>
-        <span>Updated April 16, 2026</span>
-        <span class="ah-dot">·</span>
-        <span>~12 min read</span>
-      </div>
-    </div>
-  </header>
+ <header class="article-hero">
+  <div class="ah-inner">
+   <p class="ah-kicker">Home Equity · The Mechanics</p>
+   <h1 class="ah-headline">How HELOCs actually work:<br/><em>the rate, the shock, and the math that saves you.</em></h1>
+   <p class="ah-dek">The draw period feels like freedom. The repayment period feels like an ambush. Here's what's really happening at each stage &mdash; and what disciplined borrowers do differently.</p>
+   <div class="ah-byline">
+    <span>By James B. Solomon</span>
+    <span class="ah-dot">·</span>
+    <span>Updated April 19, 2026</span>
+    <span class="ah-dot">·</span>
+    <span>~12 min read</span>
+   </div>
+  </div>
+ </header>
 
-  <div class="article-layout">
+ <div class="article-layout">
 
-  <aside class="article-toc" aria-label="Table of contents">
-    <nav>
-      <p class="toc-label">On this page</p>
-      <ol>
-        <li><a href="#two-chapters">The two chapters of a HELOC</a></li>
-        <li><a href="#rate-built">How the rate is actually built</a></li>
-        <li><a href="#the-math">The math, for a $60,000 HELOC</a></li>
-        <li><a href="#rate-moves">What happens when rates move</a></li>
-        <li><a href="#surprises">Four surprises most borrowers miss</a></li>
-        <li><a href="#defuse">Three ways to defuse payment shock</a></li>
-        <li><a href="#pay-it-off">When to just pay it off</a></li>
-        <li><a href="#decision">The decision, in one paragraph</a></li>
-      </ol>
-    </nav>
+ <aside class="article-toc" aria-label="Table of contents">
+  <nav>
+   <p class="toc-label">On this page</p>
+   <ol>
+    <li><a href="#two-chapters">The two chapters of a HELOC</a></li>
+    <li><a href="#rate-built">How the rate is actually built</a></li>
+    <li><a href="#the-math">The math, for a $60,000 HELOC</a></li>
+    <li><a href="#rate-moves">What happens when rates move</a></li>
+    <li><a href="#surprises">Four surprises most borrowers miss</a></li>
+    <li><a href="#defuse">Three ways to defuse payment shock</a></li>
+    <li><a href="#pay-it-off">When to just pay it off</a></li>
+    <li><a href="#decision">The decision, in one paragraph</a></li>
+   </ol>
+  </nav>
+ </aside>
+
+ <div class="article-body">
+
+  <aside class="short-answer">
+   <p class="sa-label">The short answer</p>
+   <p class="sa-body">A HELOC runs in two acts: a 10-year <strong>draw period</strong>, when you can borrow, repay, and re-borrow up to your limit &mdash; paying only interest on what you've drawn. Then comes a 10- to 20-year <strong>repayment period</strong>, when the line closes and your payment jumps to cover both principal and interest on whatever balance remains. The rate is variable &mdash; U.S. Prime (6.75% today) plus a margin of 1&ndash;5% based on your credit &mdash; so when the Federal Reserve moves, your payment moves. Three strategies defuse the shock at the transition: pay down principal during the draw, lock part of the balance to a fixed sub-rate, or refinance before the jump arrives. The cheapest is the first &mdash; and the one most borrowers skip.</p>
   </aside>
 
-  <div class="article-body">
+  <p class="article-lede"><span class="dropcap">A</span> HELOC looks simple on the disclosure. A rate, a limit, a thirty-year life. Sign here, initial there. But underneath that one-page summary, a HELOC actually has three clocks running at the same time &mdash; the Fed's, which controls the rate that shows up on your bill; the draw-period clock, which decides how much of your payment is going toward principal versus just renting the money; and the repayment-period clock, which decides what your payment becomes when the first two clocks stop mattering. Miss any one of them and the product feels like it's changing the rules on you.</p>
 
-    <aside class="short-answer">
-      <p class="sa-label">The short answer</p>
-      <p class="sa-body">A HELOC runs in two acts: a 10-year <strong>draw period</strong>, when you can borrow, repay, and re-borrow up to your limit &mdash; paying only interest on what you've drawn. Then comes a 10- to 20-year <strong>repayment period</strong>, when the line closes and your payment jumps to cover both principal and interest on whatever balance remains. The rate is variable &mdash; U.S. Prime (6.75% today) plus a margin of 1&ndash;5% based on your credit &mdash; so when the Federal Reserve moves, your payment moves. Three strategies defuse the shock at the transition: pay down principal during the draw, lock part of the balance to a fixed sub-rate, or refinance before the jump arrives. The cheapest is the first &mdash; and the one most borrowers skip.</p>
-    </aside>
+  <p>The mechanics aren't hidden. They're just rarely explained in the sequence that matters. Most guides describe what a HELOC is. Fewer describe what it <em>does</em> &mdash; month by month, year by year, through a rate cycle and a life change and the moment the first clock stops. That's what this page is for. Below: how the rate is built, how the payment structure changes, what the jump at year 10 actually looks like in dollars, and what you can do right now to make sure it doesn't catch you off guard.</p>
 
-    <p class="article-lede"><span class="dropcap">A</span> HELOC looks simple on the disclosure. A rate, a limit, a thirty-year life. Sign here, initial there. But underneath that one-page summary, a HELOC actually has three clocks running at the same time &mdash; the Fed's, which controls the rate that shows up on your bill; the draw-period clock, which decides how much of your payment is going toward principal versus just renting the money; and the repayment-period clock, which decides what your payment becomes when the first two clocks stop mattering. Miss any one of them and the product feels like it's changing the rules on you.</p>
+  <h2 class="article-h2" id="two-chapters">The two chapters of a HELOC</h2>
 
-    <p>The mechanics aren't hidden. They're just rarely explained in the sequence that matters. Most guides describe what a HELOC is. Fewer describe what it <em>does</em> &mdash; month by month, year by year, through a rate cycle and a life change and the moment the first clock stops. That's what this page is for. Below: how the rate is built, how the payment structure changes, what the jump at year 10 actually looks like in dollars, and what you can do right now to make sure it doesn't catch you off guard.</p>
+  <p>A HELOC is really two loans stapled together, separated by a moment called the <em>end of draw</em>.</p>
 
-    <h2 class="article-h2" id="two-chapters">The two chapters of a HELOC</h2>
+  <p>The <strong>draw period</strong> is the flexible half. For the first 10 years &mdash; 20 at a handful of lenders like Navy Federal, 5 at a few aggressive ones &mdash; you can borrow from your approved line as often as you want, pay it back, and borrow it again, the same way a credit card works, only secured by your house. Your minimum payment each month is usually just the interest on whatever balance you're carrying. On a $60,000 balance at 7.02%, that's about $357 a month. The payment feels small because, technically, it is small. But there's a cost to that comfort: interest-only means <em>the money you borrowed stays borrowed</em>. None of the $357 chips away at the $60,000. The balance at the start of month one and the balance at the start of month 120 look exactly the same.</p>
 
-    <p>A HELOC is really two loans stapled together, separated by a moment called the <em>end of draw</em>.</p>
+  <p>The <strong>repayment period</strong> is the structured half. Once the draw period ends, the line closes to new borrowing. Whatever balance you're carrying becomes a regular installment loan, typically paid down over 10 to 20 more years at the same variable rate. Your payment now includes principal and interest, and the principal portion is the part that actually reduces what you owe. On the same $60,000 balance at 7.02% over a 10-year repayment, the new minimum payment is about $700 a month &mdash; almost double the interest-only payment that ran during the draw. The jump isn't gradual. It's the first bill of the new period.</p>
 
-    <p>The <strong>draw period</strong> is the flexible half. For the first 10 years &mdash; 20 at a handful of lenders like Navy Federal, 5 at a few aggressive ones &mdash; you can borrow from your approved line as often as you want, pay it back, and borrow it again, the same way a credit card works, only secured by your house. Your minimum payment each month is usually just the interest on whatever balance you're carrying. On a $60,000 balance at 7.14%, that's about $357 a month. The payment feels small because, technically, it is small. But there's a cost to that comfort: interest-only means <em>the money you borrowed stays borrowed</em>. None of the $357 chips away at the $60,000. The balance at the start of month one and the balance at the start of month 120 look exactly the same.</p>
+  <p>A small share of HELOCs skip the repayment structure entirely and require a <strong>balloon payment</strong> &mdash; the full balance due on the day the draw period ends. Regions Bank offers the most widely known example. Balloon HELOCs are non-qualified mortgages, meaning they sidestep the federal rules that would otherwise force the lender to verify you could repay. If your loan has a balloon, it's in the closing paperwork. Read for it.</p>
 
-    <p>The <strong>repayment period</strong> is the structured half. Once the draw period ends, the line closes to new borrowing. Whatever balance you're carrying becomes a regular installment loan, typically paid down over 10 to 20 more years at the same variable rate. Your payment now includes principal and interest, and the principal portion is the part that actually reduces what you owe. On the same $60,000 balance at 7.14% over a 10-year repayment, the new minimum payment is about $700 a month &mdash; almost double the interest-only payment that ran during the draw. The jump isn't gradual. It's the first bill of the new period.</p>
+  <h2 class="article-h2" id="rate-built">How the rate is actually built</h2>
 
-    <p>A small share of HELOCs skip the repayment structure entirely and require a <strong>balloon payment</strong> &mdash; the full balance due on the day the draw period ends. Regions Bank offers the most widely known example. Balloon HELOCs are non-qualified mortgages, meaning they sidestep the federal rules that would otherwise force the lender to verify you could repay. If your loan has a balloon, it's in the closing paperwork. Read for it.</p>
+  <p>The rate on your HELOC bill isn't a single number the bank picks. It's a formula &mdash; and every part of the formula matters.</p>
 
-    <h2 class="article-h2" id="rate-built">How the rate is actually built</h2>
+  <p>The foundation is the <strong>U.S. Prime Rate</strong>, the benchmark most consumer loans track. It sits, by convention, exactly 3 percentage points above the Federal Reserve's target rate &mdash; so when the Fed raises or cuts rates at its rate-setting meetings, Prime moves the same amount, usually within a day. As of April 2026, Prime is <strong>6.75%</strong>, down 1.75 percentage points from its 8.50% peak as the Fed cut rates seven times between September 2024 and December 2025.</p>
 
-    <p>The rate on your HELOC bill isn't a single number the bank picks. It's a formula &mdash; and every part of the formula matters.</p>
+  <p>On top of Prime, your lender adds a <strong>margin</strong> &mdash; a markup, between 1 and 5 percentage points, that's set at closing and stays fixed for the life of the loan. The margin is priced off your credit score (the FICO score most lenders use), your equity, and your overall risk profile. Equity is measured as <em>combined loan-to-value</em> &mdash; the total of your first mortgage plus your HELOC divided by your home's value. A borrower with a 780 credit score and 60% combined loan-to-value might get Prime + 1.25% (an 8.00% rate). A borrower with a 680 score and 85% combined loan-to-value might get Prime + 4.50% (an 11.25% rate). Same Prime, very different bills.</p>
 
-    <p>The foundation is the <strong>U.S. Prime Rate</strong>, the benchmark most consumer loans track. It sits, by convention, exactly 3 percentage points above the Federal Reserve's target rate &mdash; so when the Fed raises or cuts rates at its rate-setting meetings, Prime moves the same amount, usually within a day. As of April 2026, Prime is <strong>6.75%</strong>, down 1.75 percentage points from its 8.50% peak as the Fed cut rates seven times between September 2024 and December 2025.</p>
+  <p>Once that formula is set at closing, two rules govern how much the rate can move:</p>
 
-    <p>On top of Prime, your lender adds a <strong>margin</strong> &mdash; a markup, between 1 and 5 percentage points, that's set at closing and stays fixed for the life of the loan. The margin is priced off your credit score (the FICO score most lenders use), your equity, and your overall risk profile. Equity is measured as <em>combined loan-to-value</em> &mdash; the total of your first mortgage plus your HELOC divided by your home's value. A borrower with a 780 credit score and 60% combined loan-to-value might get Prime + 1.25% (an 8.00% rate). A borrower with a 680 score and 85% combined loan-to-value might get Prime + 4.50% (an 11.25% rate). Same Prime, very different bills.</p>
+  <ul class="article-list">
+   <li><strong>Lifetime cap.</strong> Federal law requires one. It's almost always 18% &mdash; high enough that most borrowers think of it as a theoretical ceiling, not a real one. During the tightening cycle of 2022&ndash;2023, borrowers with margins above 4% did hit it.</li>
+   <li><strong>Periodic cap.</strong> This is the one most borrowers miss. A periodic cap limits how much your rate can move between adjustments &mdash; say, no more than 2 percentage points per year. Most HELOCs <em>do not have one</em>. Your rate can rise a full point in a single month, or fall a full point, and your next statement will reflect the change. That's very different from an adjustable-rate first mortgage, which is typically capped at 2 points per year and 5 points over the life of the loan. A HELOC has no such cushion.</li>
+  </ul>
 
-    <p>Once that formula is set at closing, two rules govern how much the rate can move:</p>
+  <p>The practical point: the rate at closing is not the rate on your next June bill. When the Fed moves, your payment moves &mdash; often within one billing cycle. Strip away the fine print, and that is what &ldquo;variable rate&rdquo; actually means.</p>
 
-    <ul class="article-list">
-      <li><strong>Lifetime cap.</strong> Federal law requires one. It's almost always 18% &mdash; high enough that most borrowers think of it as a theoretical ceiling, not a real one. During the tightening cycle of 2022&ndash;2023, borrowers with margins above 4% did hit it.</li>
-      <li><strong>Periodic cap.</strong> This is the one most borrowers miss. A periodic cap limits how much your rate can move between adjustments &mdash; say, no more than 2 percentage points per year. Most HELOCs <em>do not have one</em>. Your rate can rise a full point in a single month, or fall a full point, and your next statement will reflect the change. That's very different from an adjustable-rate first mortgage, which is typically capped at 2 points per year and 5 points over the life of the loan. A HELOC has no such cushion.</li>
-    </ul>
-
-    <p>The practical point: the rate at closing is not the rate on your next June bill. When the Fed moves, your payment moves &mdash; often within one billing cycle. Strip away the fine print, and that is what &ldquo;variable rate&rdquo; actually means.</p>
-
-    <div class="data-table-wrap">
-      <table class="data-table">
-        <thead>
-          <tr><th>Piece</th><th>Current value</th><th>How it behaves</th><th>Source</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>U.S. Prime Rate</td><td class="dt-num">6.75%</td><td>Moves with Fed decisions</td><td>Fed H.15, Dec 11, 2025</td></tr>
-          <tr><td>HELOC national avg</td><td class="dt-num">7.02%</td><td>Variable</td><td>Bankrate, Apr 8, 2026</td></tr>
-          <tr><td>Typical margin, strong credit</td><td class="dt-num">+1.0% to +1.5%</td><td>Fixed at closing</td><td>Bankrate</td></tr>
-          <tr><td>Typical margin, fair credit</td><td class="dt-num">+3.5% to +5.0%</td><td>Fixed at closing</td><td>Bankrate</td></tr>
-          <tr><td>Lifetime cap</td><td class="dt-num">18%</td><td>Federal maximum</td><td>Federal HELOC rules</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <h2 class="article-h2" id="the-math">The math, for a $60,000 HELOC</h2>
-
-    <p>Abstractions don't pay bills. Dollars do. Here's what the draw-to-repayment transition actually looks like on a typical $60,000 HELOC at April 2026's 7.14% average rate &mdash; first the path most borrowers take, then two versions of the disciplined path.</p>
-
-    <div class="math-box">
-      <p class="mb-label">Scenario</p>
-      <p class="mb-title">$60,000 HELOC at 7.14%, 10-year draw + 10-year repayment</p>
-
-      <div class="mb-row">
-        <p class="mb-case">The interest-only path &mdash; what most borrowers do</p>
-        <ul class="mb-list">
-          <li>Draw-period payment (months 1&ndash;120): <strong>$357/mo</strong>, all interest</li>
-          <li>Repayment-period payment (months 121&ndash;240): <strong>$700/mo</strong> &mdash; <span class="mb-warn">payments nearly double overnight</span></li>
-          <li>Total paid over 20 years: <strong>~$126,840</strong></li>
-          <li>Total interest paid (rate held flat): <strong>~$66,840</strong></li>
-        </ul>
-      </div>
-
-      <div class="mb-row">
-        <p class="mb-case">The disciplined 20-year path &mdash; pay down principal and interest from day one</p>
-        <ul class="mb-list">
-          <li>Monthly payment (months 1&ndash;240): <strong>$470/mo</strong>, principal + interest straight through</li>
-          <li>Payment never changes. No year-10 jump.</li>
-          <li>Total paid: <strong>$112,800</strong></li>
-          <li>Total interest paid: <strong>$52,800</strong> &mdash; <span class="mb-win">saves ~$14,040 and the payment shock</span></li>
-        </ul>
-      </div>
-
-      <div class="mb-row">
-        <p class="mb-case">The aggressive 10-year path &mdash; pay it off during the draw</p>
-        <ul class="mb-list">
-          <li>Monthly payment (months 1&ndash;120): <strong>$701/mo</strong>, full principal + interest</li>
-          <li>Loan is paid off at month 120. No repayment period. No rate risk after year 10.</li>
-          <li>Total paid: <strong>$84,120</strong></li>
-          <li>Total interest paid: <strong>$24,120</strong> &mdash; <span class="mb-win">saves ~$42,720 vs. the interest-only path</span></li>
-        </ul>
-      </div>
-
-      <p class="mb-footnote">All figures assume the HELOC rate stays flat &mdash; a generous assumption. In reality, Prime can move at every Fed meeting.</p>
-    </div>
-
-    <p>Read the rows side by side. The gap between the top row and the middle row is the cost of treating the draw period as free money. The gap between the top row and the bottom row is the cost of treating a HELOC as a 20-year loan instead of a 10-year one. The $357-a-month interest-only option is a real monthly savings &mdash; real money you can point to. But it's not saving. It's delay. And at the end of the delay, two things happen at once: you still owe the original $60,000, and your payment almost doubles.</p>
-
-    <p class="pull-quote">The shock isn't what the HELOC does. It's what the HELOC reveals &mdash; a decade of principal you chose not to pay.</p>
-
-    <p>Put another way: the interest-only HELOC costs $42,720 more in total interest than the HELOC you pay off during the draw period. That gap is the price of the flexibility. For some borrowers the flexibility is worth the price. For most it isn't &mdash; because most borrowers don't end up using the flexibility. They just use the payment.</p>
-
-    <h2 class="article-h2" id="rate-moves">What happens when rates move</h2>
-
-    <p>The math above assumed the rate stayed at 7.14% for twenty years. That's not what happens in real life. This just happened: between January 2022 and August 2023, during the Fed's most recent tightening cycle, Prime went from 3.25% to 8.50% &mdash; more than five percentage points in eighteen months. Any HELOC taken out in early 2022 more than doubled in cost before 2023 ended.</p>
-
-    <p>Here's the same $60,000 interest-only HELOC under three rate paths:</p>
-
-    <div class="data-table-wrap">
-      <table class="data-table">
-        <thead>
-          <tr><th>Rate scenario</th><th>Draw-period payment</th><th>First repayment bill</th><th>Total interest (20-year, I-O path)</th></tr>
-        </thead>
-        <tbody>
-          <tr><td>Rate holds at 7.14%</td><td class="dt-num">$357/mo</td><td class="dt-num">$700/mo</td><td class="dt-num">$66,840</td></tr>
-          <tr><td>Rate rises to 9.14% (+2%)</td><td class="dt-num">$457/mo</td><td class="dt-num">$766/mo</td><td class="dt-num">$86,760</td></tr>
-          <tr><td>Rate rises to 11.14% (+4%)</td><td class="dt-num">$557/mo</td><td class="dt-num">$843/mo</td><td class="dt-num">$108,000</td></tr>
-        </tbody>
-      </table>
-    </div>
-
-    <p>For context: a fixed-rate home equity loan at 10 years and 8.05% (current April 2026 averages) on the same $60,000 balance costs about $27,480 in total interest. The interest-only HELOC at today's rate costs ~$66,840. Under a four-point rate rise, it costs $108,000 &mdash; nearly four times the fixed home equity loan. And the dollar total doesn't capture the cash-flow hit: the monthly payment during the draw period roughly doubles, the kind of move that breaks budgets built around the smaller number.</p>
-
-    <p>None of that is a prediction. It's a stress test. A borrower shopping for a HELOC should ask two questions before signing: <em>Can I afford the payment at Prime + 4%?</em> and <em>Can I afford the first repayment bill at that same rate?</em> If the answer to either is no, the HELOC is too much house &mdash; and the disciplined-path math above doesn't save you, because the disciplined path still carries the same rate risk.</p>
-
-    <p>That's the framing for what follows. The HELOC isn't dangerous because the rate <em>might</em> move. It's dangerous because the payment structure asks you to trust yourself for a decade and then, at year 10, tests you.</p>
-
-    <h2 class="article-h2" id="surprises">Four surprises most borrowers miss</h2>
-
-    <p>Beyond the rate and the payment jump, four things catch borrowers late &mdash; items that are in the contract, but not in the sales pitch.</p>
-
-    <h3 class="article-h3">1. Most HELOCs have no monthly cap on how much the rate can move</h3>
-    <p>This is the one that makes the &ldquo;variable rate&rdquo; label do more work than it looks like. Unlike a standard adjustable-rate first mortgage, which is typically capped at 2 percentage points per year and 5 over the life of the loan, most HELOCs have only the 18% lifetime ceiling. Between adjustments &mdash; which usually happen monthly &mdash; the rate simply tracks Prime. If the Fed moves a full percentage point in a single month, your rate moves a full percentage point in a single month. The borrower planning around &ldquo;a percent or two over the next few years&rdquo; is planning around an average, not the contract.</p>
-
-    <h3 class="article-h3">2. The lender can freeze your line</h3>
-    <p>Under federal consumer-protection rules, a HELOC lender can suspend your ability to draw &mdash; mid-renovation, mid-emergency, on a Tuesday &mdash; when any of a handful of triggers hits. The most common: a meaningful drop in your home's value, a serious hit to your finances, or the lender deciding you can no longer cover the payments. During the 2008 crisis, that's exactly what happened. Countrywide froze an estimated 122,000 HELOCs; USAA reduced or froze roughly 15,000 more; Bank of America, Chase, Citibank, Washington Mutual, Wells Fargo, National City, and IndyMac all followed. A <em>CNN Money</em> story from April 2008 introduced readers to a homeowner named Carr, whose HELOC was canceled because her credit score had dropped. She found out when she tried to use the line.</p>
-
-    <p>This isn't just history. As Jeff Taylor of the Mortgage Bankers Association recently told CBS News: <em>&ldquo;If you take out a HELOC and your home value decreases materially, your lender could notify you that they intend to freeze your ability to draw on your HELOC.&rdquo;</em> As of Q1 2026, national listing prices are down 2.2% year over year, with some metros off 7%. The rules are written exactly for that environment.</p>
-
-    <h3 class="article-h3">3. Refinancing your first mortgage later gets complicated</h3>
-    <p>If you take out a HELOC and then decide to refinance your first mortgage &mdash; to capture a lower rate, pull cash out, or move to a different loan type &mdash; your HELOC lender has to agree to stay in the second-lien position behind the new first mortgage. That's called <strong>subordination</strong>, and the HELOC lender can refuse. The process takes two to four weeks and runs about $250 in fees. Approval is routine when your combined loan-to-value stays below 85%, but lenders balk when credit has dropped, income has softened, or the new first-mortgage amount pushes total leverage up. Failure to get subordination can force you to pay off the HELOC in full to close the refinance &mdash; an outcome nobody plans for.</p>
-
-    <h3 class="article-h3">4. A small share of HELOCs have balloon payments</h3>
-    <p>Most HELOCs convert to a repayment period at year 10. Some don't: they instead require the full outstanding balance to be paid on a specific date, typically the day the draw period ends. Regions Bank is the most widely offered example. A balloon HELOC falls outside the federal rules that require lenders to verify you can actually afford to pay the loan back &mdash; the protections that apply to most mortgages. If you can't pay the balloon when it comes due &mdash; and you can't refinance into something else &mdash; the lender's next step is foreclosure. Read the repayment terms before closing. &ldquo;Balloon&rdquo; is not a word lenders put on the first page.</p>
-
-    <h2 class="article-h2" id="defuse">Three ways to defuse payment shock</h2>
-
-    <p>The payment jump at year 10 is not inevitable. There are three moves a borrower can make. The first is the cheapest. The other two cost money, but they're real options when the first one isn't available.</p>
-
-    <h3 class="article-h3">The cheapest move: pay principal during the draw</h3>
-    <p>Nothing in the HELOC contract says you have to pay only the interest-only minimum. Most lenders accept voluntary principal payments with no fee. The scenarios above assumed either $357/month (minimum) or the full P+I payment ($470 or $701). You don't have to go that far. Even an extra $100/month toward principal during a 10-year draw takes enough off the balance to shrink the eventual repayment-period payment meaningfully. The principle is simple: every dollar of principal you pay during the draw is a dollar that isn't sitting there waiting to blow up your payment at month 121.</p>
-
-    <h3 class="article-h3">The hedge: lock part of the balance to a fixed sub-rate</h3>
-    <p>Many HELOC lenders &mdash; U.S. Bank, PNC, Bank of America, BMO, most credit unions &mdash; let you convert part of your outstanding balance into a fixed-rate sub-loan inside the HELOC, usually for a term of 5 to 30 years. The locked portion comes out of your variable-rate balance and starts paying itself off on its own fixed schedule. You pay for the certainty: the fixed rate is typically 0.5 to 1.5 percentage points above the variable rate. Some lenders (U.S. Bank) waive the conversion fee; others (PNC) charge around $100 per lock. If you expect rates to rise and you can't pay down fast enough to get ahead of it, locking is the hedge.</p>
-
-    <h3 class="article-h3">The exit: refinance before the shock</h3>
-    <p>The third option is to leave the HELOC before the payment structure changes &mdash; either into a new HELOC (which restarts a fresh draw period), into a fixed home equity loan (which locks the rate and payment), or into a cash-out refinance rolled into the first mortgage (which only makes sense if the new blended rate beats your current first-mortgage rate). Each involves closing costs. Each also takes time. The time to start thinking about the refi isn't month 119. It's month 96 &mdash; when you still have a year and change to shop, compare, and choose.</p>
-
-    <div class="decision-grid">
-      <div class="dg-card dg-heloc">
-        <p class="dg-label">Choose paying down during the draw when</p>
-        <ul class="dg-list">
-          <li>You have the cash flow to pay more than the interest-only minimum today.</li>
-          <li>You expect to stay in the home through the full life of the HELOC.</li>
-          <li>You'd rather save money than preserve flexibility.</li>
-          <li>You've been burned by payment shock on another loan and don't want to chance it.</li>
-          <li>You're borrowing from a bank or credit union that doesn't penalize early payoff.</li>
-        </ul>
-      </div>
-
-      <div class="dg-card dg-hel">
-        <p class="dg-label">Choose locking or refinancing when</p>
-        <ul class="dg-list">
-          <li>Cash flow won't support aggressive paydown right now.</li>
-          <li>You're worried about a rate rise before the end of the draw period.</li>
-          <li>You already know you'll sell, move, or refinance within the next few years.</li>
-          <li>Your HELOC is with a nonbank lender whose terms make voluntary payoff less attractive.</li>
-          <li>You want certainty for a specific portion of your balance &mdash; tuition, a phased renovation, known debt.</li>
-        </ul>
-      </div>
-    </div>
-
-    <h2 class="article-h2" id="pay-it-off">When to just pay it off</h2>
-
-    <p>Sometimes the honest answer is that no strategy makes a HELOC the right tool. When that's the case, the disciplined move is to accept it, stop drawing, and close the line rather than keep a second mortgage hanging over the house. A few situations where that's usually the right call:</p>
-
-    <ul class="article-list">
-      <li><strong>Your income is unstable.</strong> Both the draw-period and repayment-period payments assume a household that can write the check every month for a decade. If a layoff, a medical event, or a business slowdown would make either number hard, a frozen line won't solve the problem &mdash; and neither will the strategies above.</li>
-      <li><strong>Your home's value has fallen near or below the approved line.</strong> Lenders are allowed to freeze lines under federal rules in that environment, which means the &ldquo;emergency fund&rdquo; aspect of the HELOC is gone exactly when you'd want it. The rational move is to retire the balance and stop paying the annual fee.</li>
-      <li><strong>You're within a few years of retirement.</strong> A variable-rate loan secured by your home is a poor match for a fixed, reduced income. If the HELOC was meant to finance something that still matters after retirement, consider refinancing to a fixed home equity loan before the income change.</li>
-      <li><strong>The original need is over.</strong> People draw HELOCs for a specific job &mdash; a renovation, a business launch, a bridge between homes. When the job's done, leaving the line open indefinitely trades an open door for a small annual fee and the right to be frozen in a bad market. Close it, and buy the certainty.</li>
-      <li><strong>The numbers don't work.</strong> Paying Prime + 4% on a non-essential project while carrying higher-rate debt elsewhere &mdash; credit cards, student loans &mdash; is backwards. Prioritize the higher-rate debt, skip the HELOC, and come back when the math changes.</li>
-    </ul>
-
-    <div class="article-cta">
-      <div class="ac-inner">
-        <p class="ac-kicker">Not sure which strategy fits your situation?</p>
-        <h3 class="ac-headline">Run the interest-only, disciplined, and aggressive paths side by side.</h3>
-        <p class="ac-body">Our calculator compares the three HELOC paydown paths at your actual balance and rate &mdash; and includes a rate-shock scenario so you can see what happens if Prime moves against you before year 10.</p>
-        <a href="/" class="ac-button">Open the calculator &rarr;</a>
-      </div>
-    </div>
-
-    <h2 class="article-h2" id="decision">The decision, in one paragraph</h2>
-
-    <p>A HELOC isn't a trick. It's a product with a specific shape &mdash; flexible and cheap in the first ten years, structured and expensive in the next ten, variable-rate all the way through. The borrower who treats the interest-only minimum as the real cost pays roughly forty thousand dollars more than the borrower who pays the line down during the draw, on the same $60,000 balance. The cheapest version of a HELOC is the one you pay like a home equity loan. The most expensive is the one you let run to year 10 without a plan. If you know which version you're signing, and you've stress-tested it against a rate that's moved against you, the product is exactly as useful as it's advertised to be. If you haven't, you're not borrowing on your house. You're borrowing on your future self, and hoping.</p>
-
-    <div class="article-related">
-      <p class="ar-label">Related guides</p>
-      <ul class="ar-list">
-        <li><a href="/heloc-vs-home-equity-loan">HELOC vs. home equity loan: what's the difference?</a></li>
-        <li><a href="/cash-out-refinance-guide">Cash-out refinance: how it works, what it costs, and when it makes sense</a></li>
-        <li><a href="/heloc-rates-2026">HELOC rates in 2026: current rates, forecast, and what the Fed means for you</a></li>
-        <li><a href="/heloc-mistakes">HELOC mistakes: eight things homeowners wish they'd known</a></li>
-        <li><a href="/heloc-vs-401k-loan">HELOC vs. 401(k) loan: the hidden costs of each</a></li>
-      </ul>
-    </div>
-
-    <div class="article-sources">
-      <p class="as-label">Sources &amp; further reading</p>
-      <ol class="as-list">
-        <li>Federal Reserve, <a href="https://www.federalreserve.gov/releases/h15/" rel="noopener">H.15 Selected Interest Rates</a></li>
-        <li>CFPB, <a href="https://www.consumerfinance.gov/rules-policy/regulations/1026/40/" rel="noopener">Regulation Z &sect; 1026.40 &mdash; HELOC rules and freeze conditions</a></li>
-        <li>CFPB, <a href="https://www.consumerfinance.gov/ask-cfpb/what-fees-can-my-lender-charge-if-i-take-out-a-heloc-en-249/" rel="noopener">What fees can my lender charge if I take out a HELOC?</a></li>
-        <li>Bankrate, <a href="https://www.bankrate.com/home-equity/heloc-rates/" rel="noopener">HELOC rates, April 2026</a></li>
-        <li>Bankrate, <a href="https://www.bankrate.com/home-equity/heloc-refinance-draw-period-ends/" rel="noopener">What is the HELOC draw period?</a></li>
-        <li>Bankrate, <a href="https://www.bankrate.com/home-equity/heloc-with-fixed-rate-option/" rel="noopener">HELOC with a fixed-rate option</a></li>
-        <li>CNN Money, <a href="https://money.cnn.com/2008/04/18/real_estate/heloc_freeze.moneymag/index.htm" rel="noopener">When a HELOC freezes over (April 2008)</a></li>
-        <li>CBS News, <a href="https://www.cbsnews.com/news/are-lenders-tightening-heloc-rules-2026/" rel="noopener">Are lenders tightening HELOC rules in 2026?</a></li>
-        <li>Experian, <a href="https://www.experian.com/blogs/ask-experian/how-does-a-heloc-affect-your-credit-score/" rel="noopener">How does a HELOC affect your credit score?</a></li>
-        <li>The Mortgage Reports, <a href="https://themortgagereports.com/26473/heloc-subordination-something-no-one-asks-about-but-everyone-should" rel="noopener">HELOC subordination when refinancing your first mortgage</a></li>
-        <li>Regions Bank, <a href="https://www.regions.com/personal-banking/home-equity/home-equity-line-of-credit/balloon-payment" rel="noopener">HELOC with balloon payment option</a></li>
-      </ol>
-    </div>
-
+  <div class="data-table-wrap">
+   <table class="data-table">
+    <thead>
+     <tr><th>Piece</th><th>Current value</th><th>How it behaves</th><th>Source</th></tr>
+    </thead>
+    <tbody>
+     <tr><td>U.S. Prime Rate</td><td class="dt-num">6.75%</td><td>Moves with Fed decisions</td><td>Fed H.15, Dec 11, 2025</td></tr>
+     <tr><td>HELOC national avg</td><td class="dt-num">7.02%</td><td>Variable</td><td>Bankrate, Apr 8, 2026</td></tr>
+     <tr><td>Typical margin, strong credit</td><td class="dt-num">+1.0% to +1.5%</td><td>Fixed at closing</td><td>Bankrate</td></tr>
+     <tr><td>Typical margin, fair credit</td><td class="dt-num">+3.5% to +5.0%</td><td>Fixed at closing</td><td>Bankrate</td></tr>
+     <tr><td>Lifetime cap</td><td class="dt-num">18%</td><td>Federal maximum</td><td>Federal HELOC rules</td></tr>
+    </tbody>
+   </table>
   </div>
+
+  <h2 class="article-h2" id="the-math">The math, for a $60,000 HELOC</h2>
+
+  <p>Abstractions don't pay bills. Dollars do. Here's what the draw-to-repayment transition actually looks like on a typical $60,000 HELOC at April 2026's 7.02% average rate &mdash; first the path most borrowers take, then two versions of the disciplined path.</p>
+
+  <div class="math-box">
+   <p class="mb-label">Scenario</p>
+   <p class="mb-title">$60,000 HELOC at 7.02%, 10-year draw + 10-year repayment</p>
+
+   <div class="mb-row">
+    <p class="mb-case">The interest-only path &mdash; what most borrowers do</p>
+    <ul class="mb-list">
+     <li>Draw-period payment (months 1&ndash;120): <strong>$357/mo</strong>, all interest</li>
+     <li>Repayment-period payment (months 121&ndash;240): <strong>$700/mo</strong> &mdash; <span class="mb-warn">payments nearly double overnight</span></li>
+     <li>Total paid over 20 years: <strong>~$126,840</strong></li>
+     <li>Total interest paid (rate held flat): <strong>~$66,840</strong></li>
+    </ul>
+   </div>
+
+   <div class="mb-row">
+    <p class="mb-case">The disciplined 20-year path &mdash; pay down principal and interest from day one</p>
+    <ul class="mb-list">
+     <li>Monthly payment (months 1&ndash;240): <strong>$470/mo</strong>, principal + interest straight through</li>
+     <li>Payment never changes. No year-10 jump.</li>
+     <li>Total paid: <strong>$112,800</strong></li>
+     <li>Total interest paid: <strong>$52,800</strong> &mdash; <span class="mb-win">saves ~$14,040 and the payment shock</span></li>
+    </ul>
+   </div>
+
+   <div class="mb-row">
+    <p class="mb-case">The aggressive 10-year path &mdash; pay it off during the draw</p>
+    <ul class="mb-list">
+     <li>Monthly payment (months 1&ndash;120): <strong>$701/mo</strong>, full principal + interest</li>
+     <li>Loan is paid off at month 120. No repayment period. No rate risk after year 10.</li>
+     <li>Total paid: <strong>$84,120</strong></li>
+     <li>Total interest paid: <strong>$24,120</strong> &mdash; <span class="mb-win">saves ~$42,720 vs. the interest-only path</span></li>
+    </ul>
+   </div>
+
+   <p class="mb-footnote">All figures assume the HELOC rate stays flat &mdash; a generous assumption. In reality, Prime can move at every Fed meeting.</p>
   </div>
+
+  <p>Read the rows side by side. The gap between the top row and the middle row is the cost of treating the draw period as free money. The gap between the top row and the bottom row is the cost of treating a HELOC as a 20-year loan instead of a 10-year one. The $357-a-month interest-only option is a real monthly savings &mdash; real money you can point to. But it's not saving. It's delay. And at the end of the delay, two things happen at once: you still owe the original $60,000, and your payment almost doubles.</p>
+
+  <p class="pull-quote">The shock isn't what the HELOC does. It's what the HELOC reveals &mdash; a decade of principal you chose not to pay.</p>
+
+  <p>Put another way: the interest-only HELOC costs $42,720 more in total interest than the HELOC you pay off during the draw period. That gap is the price of the flexibility. For some borrowers the flexibility is worth the price. For most it isn't &mdash; because most borrowers don't end up using the flexibility. They just use the payment.</p>
+
+  <h2 class="article-h2" id="rate-moves">What happens when rates move</h2>
+
+  <p>The math above assumed the rate stayed at 7.02% for twenty years. That's not what happens in real life. This just happened: between January 2022 and August 2023, during the Fed's most recent tightening cycle, Prime went from 3.25% to 8.50% &mdash; more than five percentage points in eighteen months. Any HELOC taken out in early 2022 more than doubled in cost before 2023 ended.</p>
+
+  <p>Here's the same $60,000 interest-only HELOC under three rate paths:</p>
+
+  <div class="data-table-wrap">
+   <table class="data-table">
+    <thead>
+     <tr><th>Rate scenario</th><th>Draw-period payment</th><th>First repayment bill</th><th>Total interest (20-year, I-O path)</th></tr>
+    </thead>
+    <tbody>
+     <tr><td>Rate holds at 7.02%</td><td class="dt-num">$357/mo</td><td class="dt-num">$700/mo</td><td class="dt-num">$66,840</td></tr>
+     <tr><td>Rate rises to 9.14% (+2%)</td><td class="dt-num">$457/mo</td><td class="dt-num">$766/mo</td><td class="dt-num">$86,760</td></tr>
+     <tr><td>Rate rises to 11.14% (+4%)</td><td class="dt-num">$557/mo</td><td class="dt-num">$843/mo</td><td class="dt-num">$108,000</td></tr>
+    </tbody>
+   </table>
+  </div>
+
+  <p>For context: a fixed-rate home equity loan at 10 years and 7.59% (current April 2026 averages) on the same $60,000 balance costs about $25,620 in total interest. The interest-only HELOC at today's rate costs ~$66,840. Under a four-point rate rise, it costs $108,000 &mdash; nearly four times the fixed home equity loan. And the dollar total doesn't capture the cash-flow hit: the monthly payment during the draw period roughly doubles, the kind of move that breaks budgets built around the smaller number.</p>
+
+  <p>None of that is a prediction. It's a stress test. A borrower shopping for a HELOC should ask two questions before signing: <em>Can I afford the payment at Prime + 4%?</em> and <em>Can I afford the first repayment bill at that same rate?</em> If the answer to either is no, the HELOC is too much house &mdash; and the disciplined-path math above doesn't save you, because the disciplined path still carries the same rate risk.</p>
+
+  <p>That's the framing for what follows. The HELOC isn't dangerous because the rate <em>might</em> move. It's dangerous because the payment structure asks you to trust yourself for a decade and then, at year 10, tests you.</p>
+
+  <h2 class="article-h2" id="surprises">Four surprises most borrowers miss</h2>
+
+  <p>Beyond the rate and the payment jump, four things catch borrowers late &mdash; items that are in the contract, but not in the sales pitch.</p>
+
+  <h3 class="article-h3">1. Most HELOCs have no monthly cap on how much the rate can move</h3>
+  <p>This is the one that makes the &ldquo;variable rate&rdquo; label do more work than it looks like. Unlike a standard adjustable-rate first mortgage, which is typically capped at 2 percentage points per year and 5 over the life of the loan, most HELOCs have only the 18% lifetime ceiling. Between adjustments &mdash; which usually happen monthly &mdash; the rate simply tracks Prime. If the Fed moves a full percentage point in a single month, your rate moves a full percentage point in a single month. The borrower planning around &ldquo;a percent or two over the next few years&rdquo; is planning around an average, not the contract.</p>
+
+  <h3 class="article-h3">2. The lender can freeze your line</h3>
+  <p>Under federal consumer-protection rules, a HELOC lender can suspend your ability to draw &mdash; mid-renovation, mid-emergency, on a Tuesday &mdash; when any of a handful of triggers hits. The most common: a meaningful drop in your home's value, a serious hit to your finances, or the lender deciding you can no longer cover the payments. During the 2008 crisis, that's exactly what happened. Countrywide froze an estimated 122,000 HELOCs; USAA reduced or froze roughly 15,000 more; Bank of America, Chase, Citibank, Washington Mutual, Wells Fargo, National City, and IndyMac all followed. A <em>CNN Money</em> story from April 2008 introduced readers to a homeowner whose HELOC was canceled because her credit score had dropped. She found out when she tried to use the line.</p>
+
+  <p>This isn't just history. As Jeff Taylor of the Mortgage Bankers Association recently told CBS News: <em>&ldquo;If you take out a HELOC and your home value decreases materially, your lender could notify you that they intend to freeze your ability to draw on your HELOC.&rdquo;</em> As of Q1 2026, national listing prices are down 2.2% year over year, with some metros off 7%. The rules are written exactly for that environment.</p>
+
+  <h3 class="article-h3">3. Refinancing your first mortgage later gets complicated</h3>
+  <p>If you take out a HELOC and then decide to refinance your first mortgage &mdash; to capture a lower rate, pull cash out, or move to a different loan type &mdash; your HELOC lender has to agree to stay in the second-lien position behind the new first mortgage. That's called <strong>subordination</strong>, and the HELOC lender can refuse. The process takes two to four weeks and runs about $250 in fees. Approval is routine when your combined loan-to-value stays below 85%, but lenders balk when credit has dropped, income has softened, or the new first-mortgage amount pushes total leverage up. Failure to get subordination can force you to pay off the HELOC in full to close the refinance &mdash; an outcome nobody plans for.</p>
+
+  <h3 class="article-h3">4. A small share of HELOCs have balloon payments</h3>
+  <p>Most HELOCs convert to a repayment period at year 10. Some don't: they instead require the full outstanding balance to be paid on a specific date, typically the day the draw period ends. Regions Bank is the most widely offered example. A balloon HELOC falls outside the federal rules that require lenders to verify you can actually afford to pay the loan back &mdash; the protections that apply to most mortgages. If you can't pay the balloon when it comes due &mdash; and you can't refinance into something else &mdash; the lender's next step is foreclosure. Read the repayment terms before closing. &ldquo;Balloon&rdquo; is not a word lenders put on the first page.</p>
+
+  <h2 class="article-h2" id="defuse">Three ways to defuse payment shock</h2>
+
+  <p>The payment jump at year 10 is not inevitable. There are three moves a borrower can make. The first is the cheapest. The other two cost money, but they're real options when the first one isn't available.</p>
+
+  <h3 class="article-h3">The cheapest move: pay principal during the draw</h3>
+  <p>Nothing in the HELOC contract says you have to pay only the interest-only minimum. Most lenders accept voluntary principal payments with no fee. The scenarios above assumed either $357/month (minimum) or the full P+I payment ($470 or $701). You don't have to go that far. Even an extra $100/month toward principal during a 10-year draw takes enough off the balance to shrink the eventual repayment-period payment meaningfully. The principle is simple: every dollar of principal you pay during the draw is a dollar that isn't sitting there waiting to blow up your payment at month 121.</p>
+
+  <h3 class="article-h3">The hedge: lock part of the balance to a fixed sub-rate</h3>
+  <p>Many HELOC lenders &mdash; U.S. Bank, PNC, Bank of America, BMO, most credit unions &mdash; let you convert part of your outstanding balance into a fixed-rate sub-loan inside the HELOC, usually for a term of 5 to 30 years. The locked portion comes out of your variable-rate balance and starts paying itself off on its own fixed schedule. You pay for the certainty: the fixed rate is typically 0.5 to 1.5 percentage points above the variable rate. Some lenders (U.S. Bank) waive the conversion fee; others (PNC) charge around $100 per lock. If you expect rates to rise and you can't pay down fast enough to get ahead of it, locking is the hedge.</p>
+
+  <h3 class="article-h3">The exit: refinance before the shock</h3>
+  <p>The third option is to leave the HELOC before the payment structure changes &mdash; either into a new HELOC (which restarts a fresh draw period), into a fixed home equity loan (which locks the rate and payment), or into a cash-out refinance rolled into the first mortgage (which only makes sense if the new blended rate beats your current first-mortgage rate). Each involves closing costs. Each also takes time. The time to start thinking about the refi isn't month 119. It's month 96 &mdash; when you still have a year and change to shop, compare, and choose.</p>
+
+  <div class="decision-grid">
+   <div class="dg-card dg-heloc">
+    <p class="dg-label">Choose paying down during the draw when</p>
+    <ul class="dg-list">
+     <li>You have the cash flow to pay more than the interest-only minimum today.</li>
+     <li>You expect to stay in the home through the full life of the HELOC.</li>
+     <li>You'd rather save money than preserve flexibility.</li>
+     <li>You've been burned by payment shock on another loan and don't want to chance it.</li>
+     <li>You're borrowing from a bank or credit union that doesn't penalize early payoff.</li>
+    </ul>
+   </div>
+
+   <div class="dg-card dg-hel">
+    <p class="dg-label">Choose locking or refinancing when</p>
+    <ul class="dg-list">
+     <li>Cash flow won't support aggressive paydown right now.</li>
+     <li>You're worried about a rate rise before the end of the draw period.</li>
+     <li>You already know you'll sell, move, or refinance within the next few years.</li>
+     <li>Your HELOC is with a nonbank lender whose terms make voluntary payoff less attractive.</li>
+     <li>You want certainty for a specific portion of your balance &mdash; tuition, a phased renovation, known debt.</li>
+    </ul>
+   </div>
+  </div>
+
+  <h2 class="article-h2" id="pay-it-off">When to just pay it off</h2>
+
+  <p>Sometimes the honest answer is that no strategy makes a HELOC the right tool. When that's the case, the disciplined move is to accept it, stop drawing, and close the line rather than keep a second mortgage hanging over the house. A few situations where that's usually the right call:</p>
+
+  <ul class="article-list">
+   <li><strong>Your income is unstable.</strong> Both the draw-period and repayment-period payments assume a household that can write the check every month for a decade. If a layoff, a medical event, or a business slowdown would make either number hard, a frozen line won't solve the problem &mdash; and neither will the strategies above.</li>
+   <li><strong>Your home's value has fallen near or below the approved line.</strong> Lenders are allowed to freeze lines under federal rules in that environment, which means the &ldquo;emergency fund&rdquo; aspect of the HELOC is gone exactly when you'd want it. The rational move is to retire the balance and stop paying the annual fee.</li>
+   <li><strong>You're within a few years of retirement.</strong> A variable-rate loan secured by your home is a poor match for a fixed, reduced income. If the HELOC was meant to finance something that still matters after retirement, consider refinancing to a fixed home equity loan before the income change.</li>
+   <li><strong>The original need is over.</strong> People draw HELOCs for a specific job &mdash; a renovation, a business launch, a bridge between homes. When the job's done, leaving the line open indefinitely trades an open door for a small annual fee and the right to be frozen in a bad market. Close it, and buy the certainty.</li>
+   <li><strong>The numbers don't work.</strong> Paying Prime + 4% on a non-essential project while carrying higher-rate debt elsewhere &mdash; credit cards, student loans &mdash; is backwards. Prioritize the higher-rate debt, skip the HELOC, and come back when the math changes.</li>
+  </ul>
+
+  <div class="article-cta">
+   <div class="ac-inner">
+    <p class="ac-kicker">Not sure which strategy fits your situation?</p>
+    <h3 class="ac-headline">Run the interest-only, disciplined, and aggressive paths side by side.</h3>
+    <p class="ac-body">Our calculator compares the three HELOC paydown paths at your actual balance and rate &mdash; and includes a rate-shock scenario so you can see what happens if Prime moves against you before year 10.</p>
+    <a href="/" class="ac-button">Open the calculator &rarr;</a>
+   </div>
+  </div>
+
+  <h2 class="article-h2" id="decision">The decision, in one paragraph</h2>
+
+  <p>A HELOC isn't a trick. It's a product with a specific shape &mdash; flexible and cheap in the first ten years, structured and expensive in the next ten, variable-rate all the way through. The borrower who treats the interest-only minimum as the real cost pays roughly forty thousand dollars more than the borrower who pays the line down during the draw, on the same $60,000 balance. The cheapest version of a HELOC is the one you pay like a home equity loan. The most expensive is the one you let run to year 10 without a plan. If you know which version you're signing, and you've stress-tested it against a rate that's moved against you, the product is exactly as useful as it's advertised to be. If you haven't, you're not borrowing on your house. You're borrowing on your future self, and hoping.</p>
+
+  <div class="article-related">
+   <p class="ar-label">Related guides</p>
+   <ul class="ar-list">
+    <li><a href="/heloc-vs-home-equity-loan">HELOC vs. home equity loan: what's the difference?</a></li>
+    <li><a href="/cash-out-refinance-guide">Cash-out refinance: how it works, what it costs, and when it makes sense</a></li>
+    <li><a href="/heloc-rates-2026">HELOC rates in 2026: current rates, forecast, and what the Fed means for you</a></li>
+    <li><a href="/heloc-mistakes">HELOC mistakes: eight things homeowners wish they'd known</a></li>
+    <li><a href="/heloc-vs-401k-loan">HELOC vs. 401(k) loan: the hidden costs of each</a></li>
+   </ul>
+  </div>
+
+  <div class="article-sources">
+   <p class="as-label">Sources &amp; further reading</p>
+   <ol class="as-list">
+    <li>Federal Reserve, <a href="https://www.federalreserve.gov/releases/h15/" rel="noopener">H.15 Selected Interest Rates</a></li>
+    <li>CFPB, <a href="https://www.consumerfinance.gov/rules-policy/regulations/1026/40/" rel="noopener">Regulation Z &sect; 1026.40 &mdash; HELOC rules and freeze conditions</a></li>
+    <li>CFPB, <a href="https://www.consumerfinance.gov/ask-cfpb/what-fees-can-my-lender-charge-if-i-take-out-a-heloc-en-249/" rel="noopener">What fees can my lender charge if I take out a HELOC?</a></li>
+    <li>Bankrate, <a href="https://www.bankrate.com/home-equity/heloc-rates/" rel="noopener">HELOC rates, April 2026</a></li>
+    <li>Bankrate, <a href="https://www.bankrate.com/home-equity/heloc-refinance-draw-period-ends/" rel="noopener">What is the HELOC draw period?</a></li>
+    <li>Bankrate, <a href="https://www.bankrate.com/home-equity/heloc-with-fixed-rate-option/" rel="noopener">HELOC with a fixed-rate option</a></li>
+    <li>CNN Money, <a href="https://money.cnn.com/2008/04/18/real_estate/heloc_freeze.moneymag/index.htm" rel="noopener">When a HELOC freezes over (April 2008)</a></li>
+    <li>CBS News, <a href="https://www.cbsnews.com/news/are-lenders-tightening-heloc-rules-2026/" rel="noopener">Are lenders tightening HELOC rules in 2026?</a></li>
+    <li>Experian, <a href="https://www.experian.com/blogs/ask-experian/how-does-a-heloc-affect-your-credit-score/" rel="noopener">How does a HELOC affect your credit score?</a></li>
+    <li>The Mortgage Reports, <a href="https://themortgagereports.com/26473/heloc-subordination-something-no-one-asks-about-but-everyone-should" rel="noopener">HELOC subordination when refinancing your first mortgage</a></li>
+    <li>Regions Bank, <a href="https://www.regions.com/personal-banking/home-equity/home-equity-line-of-credit/balloon-payment" rel="noopener">HELOC with balloon payment option</a></li>
+   </ol>
+  </div>
+
+ </div>
+ </div>
 </article>
 
 <footer class="site-footer">
-  <div class="footer-inner">
-    <div class="footer-mast">Equity Wiser</div>
-    <div class="footer-cols">
-      <div class="footer-about">Equity Wiser provides free, unbiased calculators and guides to help homeowners make smarter home equity decisions. We do not sell your data. Revenue is earned through disclosed affiliate partnerships that do not influence our editorial content or lender rankings.</div>
-      <div class="footer-col">
-        <p class="footer-col-hed">Tools</p>
-        <ul>
-          <li><a href="/">HELOC vs Refi Calculator</a></li>
-          <li><a href="#">HELOC Payment Calculator</a></li>
-          <li><a href="#">Cash-Out Refi Calculator</a></li>
-          <li><a href="#">Home Equity Calculator</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <p class="footer-col-hed">Learn</p>
-        <ul>
-          <li><a href="/#learn">Complete 2026 Guide</a></li>
-          <li><a href="/#faq">FAQ</a></li>
-          <li><a href="/heloc-vs-home-equity-loan">HELOC vs. Home Equity Loan</a></li>
-          <li><a href="/how-helocs-work">How HELOCs Work</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-btm">
-      <p class="footer-disc"><strong>Disclaimer:</strong> This article provides information for educational purposes only and does not constitute financial, tax, or legal advice. Rates and terms vary by lender, credit score, and state. Consult a licensed mortgage professional and a tax advisor before making borrowing decisions.</p>
-      <p class="footer-copy">&#169; 2026 Equity Wiser</p>
-    </div>
+ <div class="footer-inner">
+  <div class="footer-mast">Equity Wiser</div>
+  <div class="footer-cols">
+   <div class="footer-about">Equity Wiser provides free, independent calculators and guides to help homeowners make smarter home equity decisions. We do not sell your data. Revenue is earned through clearly disclosed affiliate partnerships; these do not determine our editorial content or rankings.</div>
+   <div class="footer-col">
+    <p class="footer-col-hed">Tools</p>
+    <ul>
+     <li><a href="/">HELOC vs Refi Calculator</a></li>
+    </ul>
+   </div>
+   <div class="footer-col">
+    <p class="footer-col-hed">Learn</p>
+    <ul>
+     <li><a href="/#learn">Complete 2026 Guide</a></li>
+     <li><a href="/#faq">FAQ</a></li>
+     <li><a href="/heloc-vs-home-equity-loan">HELOC vs. Home Equity Loan</a></li>
+     <li><a href="/how-helocs-work">How HELOCs Work</a></li>
+     <li><a href="/cash-out-refinance-guide">Cash-Out Refinance Guide</a></li>
+     <li><a href="/heloc-rates-2026">HELOC Rates 2026</a></li>
+     <li><a href="/heloc-vs-personal-loan">HELOC vs. Personal Loan</a></li>
+     <li><a href="/heloc-vs-401k-loan">HELOC vs. 401(k) Loan</a></li>
+     <li><a href="/heloc-vs-reverse-mortgage">HELOC vs. Reverse Mortgage</a></li>
+     <li><a href="/three-way-comparison">Three-Way Comparison</a></li>
+     <li><a href="/heloc-for-renovation">HELOC for Renovation</a></li>
+     <li><a href="/heloc-for-debt-consolidation">HELOC for Debt Consolidation</a></li>
+     <li><a href="/heloc-as-emergency-fund">HELOC as an Emergency Fund</a></li>
+     <li><a href="/heloc-for-investment-property">HELOC for Investment Property</a></li>
+     <li><a href="/heloc-for-college">HELOC for College</a></li>
+     <li><a href="/heloc-mistakes">HELOC Mistakes</a></li>
+     <li><a href="/how-to-shop-for-heloc">How to Shop for a HELOC</a></li>
+     <li><a href="/heloc-requirements-2026">HELOC Requirements 2026</a></li>
+     <li><a href="/heloc-tax-deduction">HELOC Tax Deduction</a></li>
+     <li><a href="/heloc-application-process">HELOC Application Process</a></li>
+     <li><a href="/heloc-home-values-drop">If Home Values Drop</a></li>
+     <li><a href="/heloc-on-paid-off-house">HELOC on a Paid-Off House</a></li>
+    </ul>
+   </div>
+   <div class="footer-col">
+    <p class="footer-col-hed">Legal</p>
+    <ul>
+     <li><a href="/privacy">Privacy Policy</a></li>
+     <li><a href="/terms">Terms of Use</a></li>
+    </ul>
+   </div>
   </div>
+  <div class="footer-btm">
+   <p class="footer-disc"><strong>Disclaimer:</strong> This article provides information for educational purposes only and does not constitute financial, tax, or legal advice. Rates and terms vary by lender, credit score, and state. Consult a licensed mortgage professional and a tax advisor before making borrowing decisions.</p>
+   <p class="footer-copy">&#169; 2026 Equity Wiser</p>
+  </div>
+ </div>
 </footer>
 
 <script>
-  document.getElementById('mast-date').textContent =
-    new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+ document.getElementById('mast-date').textContent =
+  new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
 
-  (function () {
-    var links = document.querySelectorAll('.article-toc a[href^="#"]');
-    if (!links.length || !('IntersectionObserver' in window)) return;
-    var byId = {};
-    links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
-    var current = null;
-    var io = new IntersectionObserver(function (entries) {
-      entries.forEach(function (e) {
-        if (e.isIntersecting) {
-          if (current) current.classList.remove('is-active');
-          current = byId[e.target.id];
-          if (current) current.classList.add('is-active');
-        }
-      });
-    }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
-    Object.keys(byId).forEach(function (id) {
-      var el = document.getElementById(id);
-      if (el) io.observe(el);
-    });
-  })();
+ (function () {
+  var links = document.querySelectorAll('.article-toc a[href^="#"]');
+  if (!links.length || !('IntersectionObserver' in window)) return;
+  var byId = {};
+  links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+  var current = null;
+  var io = new IntersectionObserver(function (entries) {
+   entries.forEach(function (e) {
+    if (e.isIntersecting) {
+     if (current) current.classList.remove('is-active');
+     current = byId[e.target.id];
+     if (current) current.classList.add('is-active');
+    }
+   });
+  }, { rootMargin: '-30% 0px -60% 0px', threshold: 0 });
+  Object.keys(byId).forEach(function (id) {
+   var el = document.getElementById(id);
+   if (el) io.observe(el);
+  });
+ })();
 </script>
 </body>
 </html>

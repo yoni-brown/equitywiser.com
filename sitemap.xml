@@ -126,4 +126,16 @@
     <priority>0.7</priority>
     <lastmod>2026-04-19</lastmod>
   </url>
+  <url>
+    <loc>https://equitywiser.com/privacy/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-04-19</lastmod>
+  </url>
+  <url>
+    <loc>https://equitywiser.com/terms/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+    <lastmod>2026-04-19</lastmod>
+  </url>
 </urlset>
