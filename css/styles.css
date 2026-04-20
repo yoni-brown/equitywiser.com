@@ -94,6 +94,7 @@ strong { color: var(--ink); font-weight: 600; }
   white-space: nowrap;
 }
 .rate-item:last-child { border-right: none; }
+.rate-source { color: var(--ink-light); font-size: 0.62rem; }
 .rl { color: var(--ink-light); font-size: 0.63rem; letter-spacing: 0.07em; text-transform: uppercase; }
 .mast-nav {
   display: flex;
@@ -124,16 +125,6 @@ strong { color: var(--ink); font-weight: 600; }
   overflow: hidden;
   position: relative;
 }
-/* Right-edge fade — sits above the image at the viewport boundary */
-.hero::after {
-  content: '';
-  position: absolute;
-  top: 0; bottom: 0; right: 0;
-  width: 340px;
-  z-index: 3;
-  pointer-events: none;
-  background: linear-gradient(to right, transparent 0%, rgba(249,245,238,0.5) 30%, rgba(249,245,238,0.92) 70%, var(--paper) 100%);
-}
 /*
  * Asymmetric grid. Headline dominates (~60vw).
  * Image column is atmospheric — 38vw wide, but the image itself
@@ -143,19 +134,24 @@ strong { color: var(--ink); font-weight: 600; }
 .hero-inner {
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 38vw;
-  align-items: stretch;
+  grid-template-columns: 1fr minmax(360px, 30vw);
+  grid-template-areas:
+    "text data"
+    "byline byline";
+  column-gap: 1.75rem;
+  align-items: start;
   min-height: 360px;
+  padding-right: max(2rem, calc((100vw - 1200px) / 2 + 2rem));
 }
 .hero-text {
+  grid-area: text;
   padding-top: 3rem;
-  padding-bottom: 2.75rem;
-  padding-right: 2.5rem;
+  padding-bottom: 1rem;
   /* Align text with site max-width content column on wide screens */
   padding-left: max(2rem, calc((100vw - 1200px) / 2 + 2rem));
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
 }
 .hero-hed {
   font-family: var(--font-display);
@@ -166,75 +162,191 @@ strong { color: var(--ink); font-weight: 600; }
   color: var(--ink);
   margin-bottom: 1.4rem;
 }
-.hero-hed em { font-style: italic; font-weight: 400; }
+.hero-hed em {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 0.7em;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+.hero-cta {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.85rem 1.5rem;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid var(--ink);
+  align-self: flex-start;
+  transition: background 0.15s, color 0.15s;
+}
+.hero-cta:hover,
+.hero-cta:focus-visible {
+  background: var(--paper);
+  color: var(--ink);
+  outline: none;
+}
 .hero-byline {
+  grid-area: byline;
   font-family: var(--font-sans);
   font-size: 0.7rem;
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: var(--ink-light);
-  border-top: var(--rule-l);
-  padding-top: 0.7rem;
-  display: inline-block;
+  border-top: 1px solid var(--ink-faint);
+  padding: 0.85rem max(2rem, calc((100vw - 1200px) / 2 + 2rem)) 1.5rem;
+  margin-top: 1.25rem;
 }
 
-/* Image column — atmospheric, subordinate, bleeding right */
-.hero-img-col {
-  position: relative;
-  /* container bg = paper so transparent PNG sky zones show correctly */
-  background: var(--paper);
-}
 /*
- * Image extends 220px beyond the column's right edge.
- * The hero's overflow:hidden clips it at the viewport edge.
- * The right side of the house simply disappears.
+ * Right column: data-forward "rate card" replacing the hero image.
+ * Newspaper sidebar feel — monospace numbers, dotted rules, no color
+ * except a single accent on the computed gap.
  */
-.hero-house-img {
-  position: absolute;
-  top: 0; bottom: 0;
-  left: 0;
-  right: -220px;
-  width: auto;
-  height: 100%;
-  object-fit: cover;
-  object-position: 46% top;
-  /* More desaturated — image is atmosphere, not a feature */
-  filter: saturate(0.48) contrast(0.86) brightness(1.08);
+.hero-data {
+  grid-area: data;
+  align-self: start;
+  justify-self: end;
+  margin-top: 3rem;
+  padding: 1.4rem 1.7rem 1.2rem;
+  max-width: 470px;
+  width: 100%;
+  background: var(--paper-white);
+  border-top: 3px solid var(--ink);
+  border-bottom: 1px solid var(--ink-faint);
+  font-family: var(--font-sans);
 }
-/* Left fade — long and graceful, headline zone stays clean */
-.hero-img-col::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(
-    to right,
-    var(--paper) 0%,
-    rgba(249,245,238,0.82) 16%,
-    rgba(249,245,238,0.35) 38%,
-    transparent 62%
-  );
+.hd-head {
+  padding-bottom: 0.9rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px dotted var(--ink-faint);
 }
-/* Bottom fade — lawn dissolves into section border */
-.hero-img-col::after {
+.hd-dateline {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  margin-bottom: 0.55rem;
+}
+.hd-scenario-hed {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: -0.005em;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.hd-opt-label {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--ink);
+  margin-bottom: 0.5rem;
+}
+.hd-line {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: baseline;
+  gap: 0.6rem;
+  padding: 0.3rem 0;
+  font-size: 0.8rem;
+  color: var(--ink-mid);
+  border-bottom: 1px dotted var(--ink-faint);
+}
+.hd-line:last-child { border-bottom: none; }
+.hd-line-num {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+  white-space: nowrap;
+}
+.hd-line-total {
+  margin-top: 0.15rem;
+  padding-top: 0.45rem;
+  border-top: 1.5px solid var(--ink);
+  border-bottom: none;
+}
+.hd-line-total span:first-child {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--ink);
+}
+.hd-line-total .hd-line-num {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+.hd-vs {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  margin: 1rem 0;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-mid);
+  letter-spacing: 0.02em;
+}
+.hd-vs::before,
+.hd-vs::after {
   content: '';
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background: linear-gradient(
-    to bottom,
-    transparent 45%,
-    rgba(249,245,238,0.55) 75%,
-    var(--paper) 100%
-  );
+  flex: 1;
+  border-top: 1.5px solid var(--ink);
+}
+.hd-verdict {
+  margin-top: 0.75rem;
+  padding: 0.65rem 0.75rem;
+  background: var(--paper);
+  border-left: 3px solid var(--accent-warm);
+  font-family: var(--font-serif);
+  font-size: 0.85rem;
+  line-height: 1.35;
+  color: var(--ink);
+}
+.hd-verdict strong {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--accent-warm);
+}
+.hd-source {
+  margin-top: 0.9rem;
+  padding-top: 0.7rem;
+  border-top: 1px dotted var(--ink-faint);
+  font-size: 0.66rem;
+  line-height: 1.45;
+  color: var(--ink-light);
+  font-style: italic;
 }
 
 @media (max-width: 860px) {
-  .hero-inner { grid-template-columns: 1fr; min-height: auto; }
-  .hero-img-col { display: none; }
-  .hero-text { padding: 2.75rem 2rem 2.25rem; }
+  .hero-inner {
+    grid-template-columns: 1fr;
+    grid-template-areas: "text" "data" "byline";
+    min-height: auto;
+    padding-right: 0;
+    column-gap: 0;
+  }
+  .hero-data {
+    max-width: none;
+    margin: 0 2rem 2rem;
+  }
+  .hd-scenario-hed { white-space: normal; }
+  .hero-text { padding: 2.75rem 2rem 1.5rem; }
+  .hero-byline { padding: 0.85rem 2rem 1.5rem; }
 }
 
 /* ───────────────────────── EXPLAINER ──────────────────────────────── */
