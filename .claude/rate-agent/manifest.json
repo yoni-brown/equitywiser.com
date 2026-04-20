@@ -1,0 +1,172 @@
+{
+  "version": "1.0",
+  "last_run": "2026-04-20",
+  "rates_as_of": "2026-04-09",
+
+  "rates": {
+    "30yr_fixed":  { "current": 6.37, "source": "Freddie Mac PMMS",       "source_url": "https://www.freddiemac.com/pmms" },
+    "heloc_avg":   { "current": 7.02, "source": "Bankrate HELOC table",   "source_url": "https://www.bankrate.com/home-equity/heloc-rates/" },
+    "prime":       { "current": 6.75, "source": "Federal Reserve H.15",   "source_url": "https://www.federalreserve.gov/releases/h15/" },
+    "15yr_fixed":  { "current": 5.74, "source": "Freddie Mac PMMS",       "source_url": "https://www.freddiemac.com/pmms" }
+  },
+
+  "derived": {
+    "cashout_refi_30yr": {
+      "description": "Estimated 30yr cash-out refinance rate (conventional spread over base 30yr fixed)",
+      "formula": "30yr_fixed + 0.50",
+      "current": 6.87,
+      "spread_bp": 50
+    },
+    "heloc_vs_prime_spread": {
+      "description": "How far above Prime the HELOC avg sits (for the 'Prime + X' label in the hero card)",
+      "formula": "heloc_avg - prime",
+      "current": 0.27
+    },
+    "heloc_vs_refi_gap_pt": {
+      "description": "Rate differential between HELOC and cash-out refi (for the 'gap' figure in the hero card)",
+      "formula": "heloc_avg - cashout_refi_30yr",
+      "current": 0.15
+    },
+    "sample_heloc_interest_monthly": {
+      "description": "Monthly interest-only payment on a $100K HELOC at heloc_avg rate",
+      "formula": "100000 * heloc_avg / 100 / 12",
+      "round": 0,
+      "current": 585
+    },
+    "sample_existing_payment": {
+      "description": "Illustrative existing mortgage P&I — $300K at 4.0% for 30yr. STATIC (illustrates the 'most homeowners have a low rate' scenario).",
+      "formula": "amortize(300000, 4.00, 30)",
+      "round": 0,
+      "current": 1432,
+      "static": true
+    },
+    "sample_heloc_total_monthly": {
+      "description": "HELOC path total monthly = existing + HELOC interest",
+      "formula": "sample_existing_payment + sample_heloc_interest_monthly",
+      "round": 0,
+      "current": 2017
+    },
+    "sample_refi_monthly": {
+      "description": "Cash-out refi monthly P&I on $400K at cashout_refi_30yr for 30yr",
+      "formula": "amortize(400000, cashout_refi_30yr, 30)",
+      "round": 0,
+      "current": 2626
+    },
+    "sample_gap_dollars": {
+      "description": "Monthly cost difference: refi minus HELOC total",
+      "formula": "sample_refi_monthly - sample_heloc_total_monthly",
+      "round": 0,
+      "current": 609
+    }
+  },
+
+  "thresholds_bp": {
+    "normal":   { "max": 24, "scope": "manifest-locations-only" },
+    "expanded": { "min": 25, "max": 49, "scope": "manifest + grep articles for literal old-rate references and report" },
+    "full":     { "min": 50, "scope": "manifest + flag full content audit; open a todo-list PR, do not auto-push article prose edits" }
+  },
+
+  "locations": [
+    {
+      "id": "masthead_30yr",
+      "description": "30yr Fixed in the masthead rate bar",
+      "scope": "all HTML pages (24 files)",
+      "find_regex": "<span class=\"rate-item\"><span class=\"rl\">30yr Fixed</span> (\\d+\\.\\d+)%</span>",
+      "depends_on": "30yr_fixed"
+    },
+    {
+      "id": "masthead_heloc",
+      "description": "HELOC avg in the masthead rate bar",
+      "scope": "all HTML pages (24 files)",
+      "find_regex": "<span class=\"rate-item\"><span class=\"rl\">HELOC avg</span> (\\d+\\.\\d+)%</span>",
+      "depends_on": "heloc_avg"
+    },
+    {
+      "id": "masthead_prime",
+      "description": "Prime rate in the masthead rate bar",
+      "scope": "all HTML pages (24 files)",
+      "find_regex": "<span class=\"rate-item\"><span class=\"rl\">Prime</span> (\\d+\\.\\d+)%</span>",
+      "depends_on": "prime"
+    },
+    {
+      "id": "masthead_15yr",
+      "description": "15yr Fixed in the masthead rate bar",
+      "scope": "all HTML pages (24 files)",
+      "find_regex": "<span class=\"rate-item\"><span class=\"rl\">15yr Fixed</span> (\\d+\\.\\d+)%</span>",
+      "depends_on": "15yr_fixed"
+    },
+    {
+      "id": "masthead_source_date",
+      "description": "'Freddie Mac PMMS · Apr X, YYYY' label at the end of the masthead rate bar",
+      "scope": "all HTML pages (24 files)",
+      "find_regex": "Freddie Mac PMMS &middot; ([A-Z][a-z]+ \\d{1,2}, \\d{4})",
+      "depends_on": "rates_as_of"
+    },
+    {
+      "id": "hero_dateline",
+      "description": "'APR 9, 2026 rates · SAMPLE SCENARIO' kicker above the rate card on the homepage",
+      "scope": "index.html only",
+      "find_regex": "<span class=\"hd-dateline\">([A-Z][a-z]+ \\d{1,2}, \\d{4}) rates &middot; Sample Scenario</span>",
+      "depends_on": "rates_as_of"
+    },
+    {
+      "id": "hero_heloc_rate",
+      "description": "HELOC average rate on the hero card (first data row)",
+      "scope": "index.html only",
+      "find_regex": "<dt>HELOC average<small>Variable &middot; Prime \\+ ([\\d.]+)</small></dt>\\s*<dd>(\\d+\\.\\d+)<span class=\"hd-pct\">%</span></dd>",
+      "depends_on": ["heloc_avg", "heloc_vs_prime_spread"],
+      "note": "Two capture groups: the 'Prime + X' spread label and the HELOC rate itself. Update both."
+    },
+    {
+      "id": "hero_refi_rate",
+      "description": "30-yr cash-out refi rate on the hero card (second data row)",
+      "scope": "index.html only",
+      "find_regex": "<dt>30&#8209;yr cash&#8209;out refi<small>Fixed &middot; ~0.5 pt over 30&#8209;yr</small></dt>\\s*<dd>~(\\d+\\.\\d+)<span class=\"hd-pct\">%</span></dd>",
+      "depends_on": "cashout_refi_30yr",
+      "note": "If cashout_refi_30yr's spread changes (currently locked to +0.50), update the '~0.5 pt over 30-yr' label too."
+    },
+    {
+      "id": "hero_sample_heloc_interest",
+      "description": "'+ HELOC interest at X%: $Y' line on the hero card",
+      "scope": "index.html only",
+      "find_regex": "\\+ HELOC interest at (\\d+\\.\\d+)%</span>\\s*<span class=\"hd-line-num\">\\$(\\d+(?:,\\d{3})*)</span>",
+      "depends_on": ["heloc_avg", "sample_heloc_interest_monthly"],
+      "note": "Update both the rate label and the dollar amount."
+    },
+    {
+      "id": "hero_sample_heloc_total",
+      "description": "'New monthly: $X' total line on the HELOC side of the hero card",
+      "scope": "index.html only",
+      "find_regex": "<span>New monthly</span>\\s*<span class=\"hd-line-num\">\\$(\\d+(?:,\\d{3})*)</span>",
+      "depends_on": "sample_heloc_total_monthly"
+    },
+    {
+      "id": "hero_sample_refi_line",
+      "description": "'$400K at X%: $Y' refi line on the hero card",
+      "scope": "index.html only",
+      "find_regex": "<span>\\$400K at (\\d+\\.\\d+)%</span>\\s*<span class=\"hd-line-num\">\\$(\\d+(?:,\\d{3})*)</span>",
+      "depends_on": ["cashout_refi_30yr", "sample_refi_monthly"]
+    },
+    {
+      "id": "hero_verdict_dollars",
+      "description": "'Refi costs $X/mo more' verdict line on the hero card",
+      "scope": "index.html only",
+      "find_regex": "Refi costs <strong>\\$(\\d+(?:,\\d{3})*)/mo more</strong>",
+      "depends_on": "sample_gap_dollars"
+    }
+  ],
+
+  "out_of_scope_for_normal_runs": [
+    "Any rate reference inside article prose (inside <p> tags in any file)",
+    "heloc-rates-2026.html body content -- this is the current-rates article and has many rate references; needs separate content strategy",
+    "Any dollar-math example inside an article body (e.g., 'On a $60,000 balance at 7.02%, that's about $357/mo')",
+    "Sources & further reading sections (URLs shouldn't drift with rates)",
+    "Article datePublished (this is the original publish date; don't touch)"
+  ],
+
+  "always_update_after_changes": [
+    "Bump dateModified in every Article schema where ANY rate-dependent value on that page changed",
+    "Bump sitemap.xml <lastmod> for every URL whose page content changed to today's date",
+    "Bump this manifest's 'last_run' and 'rates_as_of' fields"
+  ]
+}
