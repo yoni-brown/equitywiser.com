@@ -150,7 +150,7 @@
     </div>
     <div class="footer-btm">
       <p class="footer-disc"><strong>Disclaimer:</strong> This page is provided for informational purposes. It is not legal advice. The site&rsquo;s terms of use further govern your access.</p>
-      <p class="footer-copy">&#169; 2026 Equity Wiser</p>
+      <p class="footer-copy">&#169; <span id="current-year">2026</span> Equity Wiser</p>
     </div>
   </div>
 </footer>
@@ -158,6 +158,8 @@
 <script>
   document.getElementById('mast-date').textContent =
     new Date().toLocaleDateString('en-US', { month: 'long', day: 'numeric', year: 'numeric' });
+  var yr = document.getElementById('current-year');
+  if (yr) yr.textContent = new Date().getFullYear();
 </script>
 </body>
 </html>

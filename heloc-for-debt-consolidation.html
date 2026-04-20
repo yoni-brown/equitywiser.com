@@ -326,7 +326,7 @@
     </div>
     <div class="footer-btm">
       <p class="footer-disc"><strong>Disclaimer:</strong> This article provides information for educational purposes only and does not constitute financial, tax, or legal advice. Rates and terms vary by lender, credit score, and state. Consult a licensed mortgage professional and a tax advisor before making borrowing decisions.</p>
-      <p class="footer-copy">&#169; 2026 Equity Wiser</p>
+      <p class="footer-copy">&#169; <span id="current-year">2026</span> Equity Wiser</p>
     </div>
   </div>
 </footer>
@@ -356,5 +356,6 @@
     });
   })();
 </script>
+<script>(function(){var y=document.getElementById('current-year');if(y)y.textContent=new Date().getFullYear();})();</script>
 </body>
 </html>
