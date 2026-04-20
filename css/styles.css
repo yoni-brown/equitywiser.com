@@ -612,8 +612,8 @@ input[type="checkbox"] { width: auto; accent-color: var(--ink); }
 .site-footer { background: var(--paper); border-top: 4px solid var(--ink); padding: 2.5rem 0 1.5rem; }
 .footer-inner { max-width: var(--max-w); margin: 0 auto; padding: 0 2rem; }
 .footer-mast { text-align: center; font-family: var(--font-display); font-size: clamp(1.5rem, 3vw, 2.5rem); font-weight: 700; letter-spacing: -0.025em; color: var(--ink); text-transform: uppercase; padding-bottom: 1.1rem; border-bottom: 2px solid var(--ink); margin-bottom: 1.5rem; }
-.footer-cols { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; margin-bottom: 1.75rem; }
-.footer-about { font-family: var(--font-sans); font-size: 0.78rem; color: var(--ink-mid); line-height: 1.65; }
+.footer-about { font-family: var(--font-sans); font-size: 0.78rem; color: var(--ink-mid); line-height: 1.65; max-width: 780px; margin-bottom: 1.75rem; }
+.footer-cols { display: grid; grid-template-columns: repeat(6, 1fr); gap: 1.75rem; margin-bottom: 1.75rem; }
 .footer-col-hed { font-family: var(--font-sans); font-size: 0.62rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-light); margin-bottom: 0.65rem; }
 .footer-col ul { list-style: none; }
 .footer-col li { margin-bottom: 0.38rem; }
@@ -631,8 +631,7 @@ input[type="checkbox"] { width: auto; accent-color: var(--ink); }
   .product-cards { grid-template-columns: 1fr; }
   .edu-inner, .faq-inner { grid-template-columns: 1fr; }
   .edu-sidebar { display: none; }
-  .footer-cols { grid-template-columns: 1fr 1fr; }
-  .footer-cols .footer-about { grid-column: 1 / -1; }
+  .footer-cols { grid-template-columns: repeat(3, 1fr); }
 }
 @media (max-width: 600px) {
   .mast-name { letter-spacing: -0.045em; }
@@ -644,7 +643,7 @@ input[type="checkbox"] { width: auto; accent-color: var(--ink); }
   .be-bar { flex-direction: column; gap: 0.45rem; }
   .q-top { flex-direction: column; gap: 0.4rem; }
   .q-sub { text-align: left; max-width: none; }
-  .footer-cols { grid-template-columns: 1fr; }
+  .footer-cols { grid-template-columns: repeat(2, 1fr); gap: 1.25rem; }
   .footer-btm { flex-direction: column; }
   .htable { font-size: 0.7rem; }
   .htable th, .htable td { padding: 0.4rem; }
