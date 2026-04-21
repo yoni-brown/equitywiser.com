@@ -358,7 +358,9 @@ function renderResults(r) {
   const placeholder = document.getElementById('results-placeholder');
   if (placeholder) placeholder.style.display = 'none';
   document.getElementById('results-section').classList.remove('hidden');
-  document.getElementById('results-section').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  if (!window._suppressResultsScroll) {
+    document.getElementById('results-section').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+  }
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
@@ -770,7 +772,9 @@ function onCalculate() {
   try {
     const results = computeComparison(inputs);
     renderResults(results);
-    trackEvent('calculate', { recommendation: results.recommendation });
+    if (!window._suppressResultsScroll) {
+      trackEvent('calculate', { recommendation: results.recommendation });
+    }
   } catch (err) {
     console.error('Calculation error:', err);
     const box = document.getElementById('error-box');
@@ -809,7 +813,13 @@ function populateDefaults() {
     if (el) el.value = val.toLocaleString('en-US');
   };
 
-  // Only pre-fill rates — user enters their own property numbers
+  // Pre-fill a worked example so visitors land on a live calculation
+  setCurrency('homeValue',        d.homeValue);
+  setCurrency('mortgageBalance',  d.mortgageBalance);
+  setVal('existingRate',          d.existingRate);
+  setVal('remainingTermYears',    d.remainingTermYears);
+  setCurrency('cashOutAmount',    d.cashOutAmount);
+
   setVal('helocRate',             d.helocRate);
   setVal('helocDrawYears',        d.helocDrawYears);
   setVal('helocRepayYears',       d.helocRepayYears);
@@ -904,4 +914,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (document.fonts && document.fonts.ready) {
     document.fonts.ready.then(() => applyChartFontDefaults());
   }
+
+  // Run the pre-loaded example so visitors see a live comparison on arrival,
+  // but keep the user anchored at the top of the page.
+  window._suppressResultsScroll = true;
+  onCalculate();
+  window._suppressResultsScroll = false;
 });
