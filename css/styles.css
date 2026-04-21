@@ -1534,6 +1534,10 @@ input[type="checkbox"] { width: auto; accent-color: var(--ink); }
   margin: 0;
   padding: 0;
 }
+.article-layout:not(:has(> .article-toc)) {
+  grid-template-columns: minmax(0, 720px);
+  justify-content: center;
+}
 
 .article-h2 { scroll-margin-top: 2rem; }
 
