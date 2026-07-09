@@ -1,10 +1,10 @@
 {
   "version": "1.0",
-  "last_run": "2026-06-04",
-  "rates_as_of": "2026-05-28",
+  "last_run": "2026-07-09",
+  "rates_as_of": "2026-07-09",
   "rates": {
     "30yr_fixed": {
-      "current": 6.53,
+      "current": 6.49,
       "source": "Freddie Mac PMMS",
       "source_url": "https://www.freddiemac.com/pmms"
     },
@@ -19,7 +19,7 @@
       "source_url": "https://www.federalreserve.gov/releases/h15/"
     },
     "15yr_fixed": {
-      "current": 5.87,
+      "current": 5.82,
       "source": "Freddie Mac PMMS",
       "source_url": "https://www.freddiemac.com/pmms"
     }
@@ -28,7 +28,7 @@
     "cashout_refi_30yr": {
       "description": "Estimated 30yr cash-out refinance rate (conventional spread over base 30yr fixed)",
       "formula": "30yr_fixed + 0.50",
-      "current": 7.03,
+      "current": 6.99,
       "spread_bp": 50
     },
     "heloc_vs_prime_spread": {
@@ -39,7 +39,7 @@
     "heloc_vs_refi_gap_pt": {
       "description": "Rate differential between HELOC and cash-out refi (for the 'gap' figure in the hero card)",
       "formula": "heloc_avg - cashout_refi_30yr",
-      "current": 0.4
+      "current": 0.44
     },
     "sample_heloc_interest_monthly": {
       "description": "Monthly interest-only payment on a $100K HELOC at heloc_avg rate",
@@ -64,13 +64,13 @@
       "description": "Cash-out refi monthly P&I on $400K at cashout_refi_30yr for 30yr",
       "formula": "amortize(400000, cashout_refi_30yr, 30)",
       "round": 0,
-      "current": 2669
+      "current": 2659
     },
     "sample_gap_dollars": {
       "description": "Monthly cost difference: refi minus HELOC total",
       "formula": "sample_refi_monthly - sample_heloc_total_monthly",
       "round": 0,
-      "current": 618
+      "current": 608
     }
   },
   "thresholds_bp": {
